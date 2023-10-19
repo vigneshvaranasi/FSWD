@@ -7,9 +7,9 @@ Learn Full Stack Web Development On Node Js
       - [Basic HTML Tags]()
       - [Unordered Lists]()
       - [Ordered Lists]()
-      - [Adding Lists with Content]()
-      - [Adding Image with content]()
-      - [Adding Header]()
+      - [Adding Lists to Recipe Page]()
+      - [Adding Image to Recipe Page]()
+      - [Adding Header to Recipe Page]()
       - [Learning Anchor Tags]()
 
 
