@@ -11,5 +11,6 @@ Learn Full Stack Web Development On Node Js
       - [Adding Image to Recipe Page](https://vigneshvaranasi.github.io/FSWD/2.%20Intro%20to%20HTML/6.Adding%20Image%20to%20Recipe%20Page.html)
       - [Learning Anchor Tags](https://vigneshvaranasi.github.io/FSWD/2.%20Intro%20to%20HTML/7.Adding%20Anchor%20tag.html)
 
+3. [More on HTML](https://vigneshvaranasi.github.io/FSWD/3.%20More%20on%20HTML/3.Create%20Class%20Time%20Table.html)
 
 
