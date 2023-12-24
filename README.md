@@ -16,5 +16,9 @@ Learn Full Stack Web Development On Node Js
       - [Special Characters](https://vigneshvaranasi.github.io/FSWD/3.%20More%20on%20HTML/2.Special%20Characters.html)
       - [Class Time Table](https://vigneshvaranasi.github.io/FSWD/3.%20More%20on%20HTML/3.Create%20Class%20Time%20Table.html)
 
+4. Forms in HTML
+      - [Different Types of inputs in Forms](https://vigneshvaranasi.github.io/FSWD/4.%20Forms/1.Simple%20Form.html)
+      - [Radio and Check Boxes in Forms](https://vigneshvaranasi.github.io/FSWD/4.%20Forms/2.Radio%20and%20Check%20Box)
+
 
 
