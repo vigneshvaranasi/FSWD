@@ -12,13 +12,14 @@ Learn Full Stack Web Development On Node Js
       - [Learning Anchor Tags](https://vigneshvaranasi.github.io/FSWD/2.%20Intro%20to%20HTML/7.Adding%20Anchor%20tag.html)
 
 3. More on HTML
-      - [Formatting Text](https://vigneshvaranasi.github.io/FSWD/3.%20More%20on%20HTML/1.Formatting%20Text.html)
-      - [Special Characters](https://vigneshvaranasi.github.io/FSWD/3.%20More%20on%20HTML/2.Special%20Characters.html)
-      - [Class Time Table](https://vigneshvaranasi.github.io/FSWD/3.%20More%20on%20HTML/3.Create%20Class%20Time%20Table.html)
+      - [Formatting Text](https://vigneshvaranasi.github.io/FSWD/3.%20More%20on%20HTML/1.Formatting%20Text)
+      - [Special Characters](https://vigneshvaranasi.github.io/FSWD/3.%20More%20on%20HTML/2.Special%20Characters)
+      - [Class Time Table](https://vigneshvaranasi.github.io/FSWD/3.%20More%20on%20HTML/3.Create%20Class%20Time%20Table)
 
 4. Forms in HTML
-      - [Different Types of inputs in Forms](https://vigneshvaranasi.github.io/FSWD/4.%20Forms/1.Simple%20Form.html)
+      - [Different Types of inputs in Forms](https://vigneshvaranasi.github.io/FSWD/4.%20Forms/1.Simple%20Form)
       - [Radio and Check Boxes in Forms](https://vigneshvaranasi.github.io/FSWD/4.%20Forms/2.Radio%20and%20Check%20Box)
+      - [Select and Text Area](https://vigneshvaranasi.github.io/FSWD/4.%20Forms/3.Select%20and%20Text%20area)
 
 
 
