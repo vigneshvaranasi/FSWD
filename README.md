@@ -1,10 +1,12 @@
 # Full Stack Web Development
 Learn Full Stack Web Development On Node Js
 
+
+## HTML
+
 1. [Getting Started With Basics](https://vigneshvaranasi.github.io/FSWD/01-Getting%20Started%20with%20Basics!/1.index)
 
 2. [Introduction to HTML](https://vigneshvaranasi.github.io/FSWD/02-Intro%20to%20HTML/1.Creating%20First%20HTML%20Page)
-      - [Basic HTML Tags](https://vigneshvaranasi.github.io/FSWD/02-Intro%20to%20HTML/2.Basic%20HTML%20Tags)
       - [Unordered Lists](https://vigneshvaranasi.github.io/FSWD/02-Intro%20to%20HTML/3.Unordered%20Lists)
       - [Ordered Lists](https://vigneshvaranasi.github.io/FSWD/02-Intro%20to%20HTML/4.Ordered%20List)
       - [Adding Lists to Recipe Page](https://vigneshvaranasi.github.io/FSWD/02-Intro%20to%20HTML/5.Adding%20Lists%20to%20Recipe%20Page)
