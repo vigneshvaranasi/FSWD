@@ -25,6 +25,8 @@ Learn Full Stack Web Development Using HTML, CSS, Bootstrap JavaScript, Node.js,
       - [Emphasis](https://vigneshvaranasi.github.io/FSWD/02-Intro%20to%20HTML/06-Emphasis)
       - [Links](https://vigneshvaranasi.github.io/FSWD/02-Intro%20to%20HTML/07-Anchor%20Tag)
       - [Images](https://vigneshvaranasi.github.io/FSWD/02-Intro%20to%20HTML/08-Image)
+      - [Video](https://vigneshvaranasi.github.io/FSWD/02-Intro%20to%20HTML/09-Video)
+      - [Audio](https://vigneshvaranasi.github.io/FSWD/02-Intro%20to%20HTML/10-Audio)
       
       [Tea Recipe Page](https://vigneshvaranasi.github.io/FSWD/02-Intro%20to%20HTML/Tea%20Recipe)
 
