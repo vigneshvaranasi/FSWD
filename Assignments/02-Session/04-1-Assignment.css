@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #e9edd6;
+    padding: 70px;
+}
+.heading{
+    margin-top: -25px;
+    margin-bottom:30px;
+    font-size: 30px;
+    font-family: "Fjalla One", sans-serif;
+}
+.about{
+    display: flex;
+    font-size: 1.2rem;
+    gap:20px;
+}
+span,a{
+    color: #c00a0c;
+}
+.text{
+    width: 460px;
+    font-family: "Assistant", sans-serif;
+}   
+img{
+    width: 200px;
+}
+.products-heading,.order-heading{
+    font-family: "Fjalla One", sans-serif;
+    margin-top: 10px;
+}
+.products,.order{
+    padding-left: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: "Assistant", sans-serif;
+}
+.footer{
+    margin-top: 20px;
+}
+@media screen and (max-width: 500px){
+    body{
+        padding-left: 15px;
+    }
+    .about{
+        flex-direction: column;
+    }
+    .text{
+        width: 100%;
+    }
+}
