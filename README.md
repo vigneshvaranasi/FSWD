@@ -30,6 +30,8 @@ Learn Full Stack Web Development Using HTML, CSS, Bootstrap JavaScript, Node.js,
       
       [Tea Recipe Page](https://vigneshvaranasi.github.io/FSWD/02-Intro%20to%20HTML/Tea%20Recipe)
 
+# Hands On Practice
+1. [Employee Card](https://vigneshvaranasi.github.io/FSWD/Hands-On-Practice/01-Project/)
 
 # Assignments
 1. [Assignment 1](https://vigneshvaranasi.github.io/FSWD/Assignments/01-Session/01-Assignment)
