@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{   
+    background-image: url(https://images.pexels.com/photos/937783/pexels-photo-937783.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+    text-align: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    background-size: auto;
+}
+h1{
+    margin-top: 90px;
+    font-size: 10rem;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+p{
+    padding: 15px;
+    font-size: 1.5rem;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 2rem;
+    padding: 10px;
+    margin: 20px;
+    border: 2px solid #fff;
+    font-family: "Lato", sans-serif;
+}
+div{
+    margin-top: 25px;
+}
+@media screen and (max-width: 600px){
+    h1{
+        font-size: 5rem;
+    }
+    a{
+        display: block;
+    }
+}
