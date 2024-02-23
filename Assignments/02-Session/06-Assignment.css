@@ -3,11 +3,11 @@
     padding: 0;
 }
 body{   
-    background-image: url(https://images.pexels.com/photos/937783/pexels-photo-937783.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+    background-image: url(pexels-photo-937783.jpeg);
     text-align: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat-x;
     color: #fff;
-    background-size: auto;
+    background-size: 100%;
     padding-bottom: 60px;
 }
 h1{
@@ -33,9 +33,12 @@ a{
 div{
     margin-top: 25px;
 }
-@media screen and (max-width: 600px){
+@media screen and (max-width: 820px){
     h1{
         font-size: 5rem;
+    }
+    body{
+        background-size: auto;
     }
     a{
         display: block;
