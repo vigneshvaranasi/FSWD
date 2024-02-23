@@ -5,9 +5,9 @@
 body{   
     background-image: url(pexels-photo-937783.jpeg);
     text-align: center;
-    background-repeat: repeat-x;
+    background-repeat: no-repeat;
     color: #fff;
-    background-size: 100%;
+    background-size:cover;
     padding-bottom: 60px;
 }
 h1{
@@ -33,12 +33,12 @@ a{
 div{
     margin-top: 25px;
 }
-@media screen and (max-width: 820px){
+@media screen and (max-width: 810px){
     h1{
         font-size: 5rem;
     }
     body{
-        background-size: auto;
+        background-size:auto;
     }
     a{
         display: block;
