@@ -41,6 +41,7 @@ Learn Full Stack Web Development Using HTML, CSS, Bootstrap JavaScript, Node.js,
 4. [Assignment 4](https://vigneshvaranasi.github.io/FSWD/Assignments/02-Session/04-1-Assignment)
 5. [Assignment 5](https://vigneshvaranasi.github.io/FSWD/Assignments/02-Session/05-1-Assignment)
 6. [Assignment 6](https://vigneshvaranasi.github.io/FSWD/Assignments/02-Session/06-Assignment)
+7. [Assignment 7](https://vigneshvaranasi.github.io/FSWD/Assignments/03-Session/07-Assignment)
 
 
 # To Do
