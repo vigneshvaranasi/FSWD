@@ -1,0 +1,13 @@
+.content-box{
+    border: 10px solid black;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+}
+.border-box{
+    border: 10px solid black;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    box-sizing: border-box;
+}

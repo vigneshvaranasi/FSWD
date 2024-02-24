@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.parent{
+    max-width: 400px;
+    height: 400px;
+    margin: auto;
+    margin-top: 100px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.child1,.child2,.child3{
+    width: 100px;
+    height: 100px;
+    text-align: center;
+}
+.child1{
+    background-color: tomato;
+}
+.child2{
+    background-color: lightsalmon;
+}
+.child3{
+    background-color: cadetblue;
+}

@@ -1,0 +1,8 @@
+
+:root{
+    --light-pink:#d36363;
+}
+
+h1{
+    color: var(--light-pink);
+}

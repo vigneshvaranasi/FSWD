@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colspan Example</title>
+</head>
+<style>
+    table {
+       width: 400px;
+       margin: auto;
+       text-align: center;
+       margin-top: 150px;
+    }
+    table,th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 8px;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+</style>
+<body>
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Expence</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Vignesh</td>
+                <td>1000</td>
+            </tr>
+            <tr>
+                <td>Eswar</td>
+                <td>5000</td>
+            </tr>
+            <tr>
+                <td>Fakruddin</td>
+                <td>2000</td>
+            </tr>
+            <tr>
+                <td colspan="2">Total = 8000</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rowsapn Example</title>
+</head>
+<style>
+    table {
+       width: 400px;
+       margin: auto;
+       text-align: center;
+       margin-top: 150px;
+    }
+    table,th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 8px;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+</style>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Subject</th>
+                <th>Marks</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="3">1</td>
+                <td rowspan="3">Vignesh</td>
+                <td>C</td>
+                <td>90</td>
+            </tr>
+            <tr>
+                <td>C++</td>
+                <td>80</td>
+            </tr>
+            <tr>
+                <td>JAVA</td>
+                <td>70</td>
+            </tr>
+            <tr>
+                <td rowspan="3">2</td>
+                <td rowspan="3">Fakruddin</td>
+                <td>C</td>
+                <td>80</td>
+            </tr>
+            <tr>
+                <td>C++</td>
+                <td>90</td>
+            </tr>
+            <tr>
+                <td>JAVA</td>
+                <td>80</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

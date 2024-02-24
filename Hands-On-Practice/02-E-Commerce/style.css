@@ -2,3 +2,34 @@
     margin: 0;
     padding: 0;
 }
+.header{
+    background-color: #f4f4f4;
+    padding: 20px;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+}
+.header ul{
+    padding: 3px;
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+.header ul li a{
+    text-decoration: none;
+    color: black;
+}
+.header ul li a:hover{
+    color: #048bb4;
+}
+.main{
+    min-height: 60vh;
+}
+.footer{
+    background-color: #131a22;
+    color: #fff;
+    padding: 20px;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+}
