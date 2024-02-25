@@ -11,12 +11,18 @@ table {
     text-align: center;
 }
 
-table{
-    border: 1px solid black;
+table,.title,.sub{
+    border: 2px solid black;
     border-collapse: collapse;
+    padding: 10px;
 }
-th,td {
-    border: 1px solid black;
+.left{
+    padding: 9px;
+    border-left:2px solid black;
+    border-right:2px solid black;
+}
+.table2 th,.table2 td {
+    border: 2px solid black;
     border-collapse: collapse;
     padding: 8px;
 }
