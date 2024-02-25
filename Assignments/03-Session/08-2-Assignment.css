@@ -33,6 +33,7 @@
     padding-top: 85px;
     flex-wrap: wrap;
     gap: 50px;
+    padding-bottom: 30px;
 }
 .card{
     width: 260px;
@@ -60,6 +61,7 @@
     text-decoration: none;
     color: #000000;
     border-radius: 15px;
+    color: #ffffff;
 }
 .link1{
     width: 60px;    
@@ -73,23 +75,35 @@
     width: 60px;
     background-color: #cd98b2;
 }
+.navbar a{
+    text-decoration: none;
+    color: #000000;
+}
+.navbar a:hover{
+    color: #35534b;
+}
 @media screen and (max-width: 710px){
     .navbar{
         font-size: 1rem;
     }
     .navbar ul{
-        gap: 15px;
+        gap: 10px;
     }
     .card-container{
         padding-top: 30px;
     }
     .card{
         width: 270px;
-    }
+    }    
     .content{
-        background-color: #68a190;
-        background-image: none;
-        background-size: 100% 100%;
-    }
-    
+        background-size: contain;
+        height: 100%;
+    } 
+}
+@media screen and (min-width: 710px ) and (max-width: 1190px){
+    .content{
+        background-size: contain;
+        background-repeat: repeat;
+        height: 150%;
+    } 
 }
