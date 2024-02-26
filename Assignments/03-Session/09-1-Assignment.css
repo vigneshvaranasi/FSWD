@@ -64,6 +64,19 @@ h1{
     padding: 0;
     margin: auto;
 }
+.page{
+    text-align: center;
+    color: #000000;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.page a{
+    text-decoration: none;
+    color: #000;
+}
+.page a:hover{
+    text-decoration: underline;
+}
 @media screen and (max-width: 710px){
     .card-container{
         padding-top: 30px;

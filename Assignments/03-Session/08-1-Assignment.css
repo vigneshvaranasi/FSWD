@@ -31,7 +31,7 @@ body{
     text-align: center;
     background-color: #ffffff;
 }
-a{
+.card a{
     text-decoration: none;
     color: #ffffff;
     background-color: #808080;
@@ -60,4 +60,18 @@ a{
     font-size: 2rem;
     color: #000000;
     font-family: "Inconsolata", monospace;
+}
+.page{
+    font-family: "Inconsolata", monospace;
+    text-align: center;
+    color: #000000;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.page a{
+    text-decoration: none;
+    color: #000;
+}
+.page a:hover{
+    text-decoration: underline;
 }
