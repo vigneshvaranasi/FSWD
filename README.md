@@ -59,5 +59,6 @@ Learn Full Stack Web Development Using HTML, CSS, Bootstrap JavaScript, Node.js,
 - [ ] Add more styles for Lists
 - [ ] Add more On Flexbox
 - [ ] Arrange the Codes in a proper way
+- [ ] Update Notes
 
 
