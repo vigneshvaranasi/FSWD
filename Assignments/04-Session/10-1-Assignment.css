@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Source Sans Pro';
+    background:#ff0000;
+    color:white;
+    margin-bottom: 30px;
+}
+header{
+    background-color: #fff;
+    padding: 10px;
+    text-align: start;
+    padding-left: 100px;
+}
+header a{
+    text-decoration:none;
+    color:#ff0000;
+    font-size:1.8em;
+    font-weight:600;
+}
+.parent{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:1fr auto;
+    column-gap: 10px;
+    row-gap: 10px;
+    margin: 10px;
+}
+.hero-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-column: 1/4;
+    grid-row: 1/2;
+    margin-top: 60px;
+    padding: 20px;
+    gap: 10px;
+}
+.hero-heading{
+    font-size: 3rem;
+    font-weight: 300;
+    margin-left: 0px;
+    width: 700px;
+}
+.hero-content{
+    display: block;
+    font-size: 1.5rem;
+    margin-top: 30px;
+}
+.logo{
+    width: 200px;
+    margin-left: 100px;
+}
+.card1{
+    background-color: #571212;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    text-align: start;
+    padding:20px;
+}
+.card2{
+    background-color: #571212;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    text-align: start;
+    padding:20px;
+}
+.card3{
+    background-color: #571212;
+    grid-column: 3/4;
+    grid-row: 2/3;
+    text-align: start;
+    padding:20px;
+}
+.card-heading{
+    font-size: 1.5rem;
+    margin: 25px;
+}
+.card-content{
+    color: #E98A8A;
+    font-size: 0.8rem;
+    margin: 25px;
+}
+@media screen and (max-width: 576px){
+    header{
+        padding-left: 20px;
+    }
+    .logo{
+        /* display: none; */
+        padding-right: 110px;
+    }
+    .hero-section{
+        margin-top: 20px;
+    }
+    .parent{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows:1fr auto auto auto;
+        column-gap: 10px;
+        row-gap: 10px;
+        margin: 20px;
+    }
+    .card1{
+        grid-column: 1/4;
+        grid-row: 2/3;
+    }
+    .card2{
+        grid-column: 1/4;
+        grid-row: 3/4;
+    }
+    .card3{
+        grid-column: 1/4;
+        grid-row: 4/5;
+    }
+}
+
