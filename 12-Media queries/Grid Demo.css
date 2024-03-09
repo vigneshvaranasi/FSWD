@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.parent{
+    display: grid;
+    /* grid-template-columns: 100px 100px 100px; */
+    /* grid-template-columns: 33.33% 33.33% 33.33%; */
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:100px 100px 100px 100px;
+    /* grid-gap: 10px; */
+    column-gap: 10px;
+    row-gap: 10px;
+    /* gap: 10px; */
+}
+.header{
+    background-color: #edd36e;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    text-align: center;
+    line-height: 100px;
+}
+.footer{
+    background-color: #89d4b9;
+    /*     grid-column-start: 1;
+    grid-column-end: 4; */
+    grid-column: 1 /4; /* this is a Shortcut */
+    text-align: center;
+    line-height: 100px;
+}
+.sidebar{
+    background-color: #88bcdf;
+    grid-column: 1/2;
+    grid-row: 2 / 4;
+    text-align: center;
+    line-height: 200px;
+}
+.content1{
+    background-color: #e99b92;
+    grid-column: 2/4;
+    grid-row: 2 / 3;
+    text-align: center;
+    line-height: 100px;
+}
+.content2{
+    background-color: #d1b7e8;
+    grid-column: 2/3;
+    grid-row: 3/4;
+    text-align: center;
+    line-height: 100px;
+}
+.content3{
+    background-color: #e1b56d;
+    grid-column: 3/4;
+    grid-row: 3/4;
+    text-align: center;
+    line-height: 100px;
+}
+@media screen and (max-width:576px) {
+    .sidebar{
+        grid-column: 1/4;
+        grid-row: 2/3;
+        line-height:100px;
+    }
+    .content1{
+        grid-column: 1/4;
+        grid-row: 3/4;
+    }
+    .content2{
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+    .content3{
+        grid-column: 2/4;
+        grid-row: 4/5;
+    }
+}

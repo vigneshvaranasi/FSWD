@@ -56,3 +56,5 @@ Learn Full Stack Web Development Using HTML, CSS, Bootstrap JavaScript, Node.js,
 - [ ] Add more styles for Lists
 - [ ] Add more On Flexbox
 - [ ] Refactor and Seperete All CSS and HTML Files
+- [ ] Make Grid Responsive
+- [ ] Make Image Responsive in media Queries
