@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+div{
+    background-color: #afdce8;
+    width: 100%;
+    height: 100vh;
+}
+@media screen and (max-width: 576px){
+    div{
+        background-color: #ce9090;
+    }
+}
+@media screen and (min-width: 577px) and (max-width: 768px){
+    div{
+        background-color: #90ce90;
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 992px){
+    div{
+        background-color: #cece90;
+    }
+}
