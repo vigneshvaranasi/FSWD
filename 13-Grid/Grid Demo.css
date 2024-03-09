@@ -14,33 +14,45 @@
     /* gap: 10px; */
 }
 .header{
-    background-color: #f1c40f;
+    background-color: #edd36e;
     grid-column-start: 1;
     grid-column-end: 4;
+    text-align: center;
+    line-height: 100px;
 }
 .footer{
     background-color: #89d4b9;
-/*     grid-column-start: 1;
+    /*     grid-column-start: 1;
     grid-column-end: 4; */
     grid-column: 1 /4; /* this is a Shortcut */
+    text-align: center;
+    line-height: 100px;
 }
 .sidebar{
-    background-color: #3498db;
+    background-color: #88bcdf;
     grid-column: 1/2;
     grid-row: 2 / 4;
+    text-align: center;
+    line-height: 200px;
 }
 .content1{
-    background-color: #e74c3c;
+    background-color: #e99b92;
     grid-column: 2/4;
     grid-row: 2 / 3;
+    text-align: center;
+    line-height: 100px;
 }
 .content2{
-    background-color: #2ecc71;
+    background-color: #d1b7e8;
     grid-column: 2/3;
     grid-row: 3/4;
+    text-align: center;
+    line-height: 100px;
 }
 .content3{
-    background-color: #f39c12;
+    background-color: #e1b56d;
     grid-column: 3/4;
     grid-row: 3/4;
+    text-align: center;
+    line-height: 100px;
 }
