@@ -49,16 +49,10 @@ Learn Full Stack Web Development Using HTML, CSS, Bootstrap JavaScript, Node.js,
 
 
 # To Do
-- [ ] Modify Text Styling
 - [ ] Add Box Modal
-- [ ] Add Selectors
 - [ ] Add Background Images
-- [ ] Add Text Styling
 - [ ] Add CSS Units
 - [ ] Add Border
 - [ ] Add more styles for Lists
 - [ ] Add more On Flexbox
-- [ ] Arrange the Codes in a proper way
-- [ ] Update Notes
-
-
+- [ ] Refactor and Seperete All CSS and HTML Files

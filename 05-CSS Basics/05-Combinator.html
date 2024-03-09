@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinator</title>
+</head>
+<style>
+    .descendant p {
+        color: #db8383;
+    }
+
+    h1+p {
+        color: #7ebdd0;
+    }
+
+    ol>li {
+        border-top: 5px solid red;
+    }
+</style>
+
+<body>
+    <div class="descendant">
+        <p>Descendant combinator</p>
+    </div>
+
+    <h1>Former Element</h1> <!-- h1 is former -->
+    <p>target element</p> <!-- immediate element -->
+    <p>un-affected element</p> <!-- un-affected element -->
+
+    <ul>
+        <li>Unordered item</li>
+        <li>Unordered item
+            <ol>
+                <li>Item 1</li>
+                <li>Item 2</li>
+            </ol>
+        </li>
+    </ul>
+</body>
+
+</html>
