@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+nav{
+    /* background-color:#fff; */
+    background: transparent;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    color: #1f1f1f;
+    margin-left: -100px;
+}
+nav li a{
+    text-decoration: none;
+    color: #1f1f1f;
+}
+/* nav li a:hover{
+    background-color: #eaeea9;
+    padding: 7px;
+    border-radius: 5px;
+    margin-left: -20px;
+    margin-top: -20px;
+    margin-bottom: -20px;
+} */
+nav ul li{
+    gap: 30px;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+nav li{
+    justify-content: start;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: -150px;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    font-size: 1em;
+    margin-right: -150px;
+}
+.dropdown{
+    position: relative;
+    top: -1px;
+    width: 14px;
+    display: inline-block;
+}
+.logo{
+    margin-top: 20px;
+    margin-bottom: 12px;
+    margin-left: -50px;
+    width: 80px;
+}
+.hero-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px;
+}
+.hero-section img{
+    max-width: 550px;
+    border-radius: 5px;
+}
+.hero-section .heading {
+    margin-left: 90px;
+    padding-top: 90px;
+    width: 450px;
+    font-size: 4.5rem;
+    margin-top: 20px;
+}
+.hero-section p span{
+    color: #494945;
+    margin-top: 20px;
+    width: 450px;
+    font-size: 1rem;
+    display: block;
+}
+@media screen and (max-width: 868px){
+    nav li a{
+        display: none;
+    }
+    nav ul li a{
+        display: flex;
+    }
+    
+}
