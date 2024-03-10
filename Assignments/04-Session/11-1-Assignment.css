@@ -6,19 +6,15 @@ body{
     color: #fff;
 }
 .parent{
+    height: 110vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows:150px 150px 150px;
-    margin: 20px;
+    grid-template-rows:1fr 1fr 1fr;
 }
 .child1{
     background-color: #31322c;
     grid-column: 1 / 2;
     grid-row: 1 / 2;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: start;
 }
 .child2{
     background-color: #39a0ed;
@@ -65,15 +61,81 @@ body{
     align-items: center;
     text-align: start;
 }
-.heading{
-    text-transform: uppercase;
-    font-family: "Poppins", sans-serif;
-    margin: 20px;
-    font-size: 1.5rem;
+.common{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 35px;
 }
-.content{
-    text-align: start;
-    font-family: "Poppins", sans-serif;
-    margin: 20px;
+.common .heading{
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+}
+.common .content{
     font-size: 0.8rem;
+    line-height: 1.8;
+    font-family: 'Poppins', sans-serif;
+}
+.center{
+    align-items: center;
+}
+@media screen and (max-width:840px)/*  and (min-width:660)  */{
+    .parent{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows:1fr 1fr 1fr 1fr 1fr;
+    }
+    .child4{
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+    .child5{
+        grid-column: 2 / 4;
+        grid-row: 2 / 3;
+    }
+    .child6{
+        grid-column: 1 / 3;
+        grid-row: 3 / 4;
+    }
+    .child7{
+        grid-column: 1 / 2;
+        grid-row: 5 / 6;
+    }
+    .child9{
+        grid-column: 2 / 4;
+        grid-row: 5 / 6;
+    }
+}
+@media screen and (max-width:630px) {
+    .parent{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows:1fr 1fr 1fr 1fr 1fr;
+    }
+    .child3{
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+    .child4{
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+    .child7{
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+    }
+    .child8{
+        grid-column: 2 / 3;
+        grid-row: 4 / 5;
+    }
+    .child9{
+        grid-column: 1 / 3;
+        grid-row: 5 / 6;
+    }
+    .common .heading{
+        font-size: 1rem;
+    }
+    .common .content{
+        font-size: 0.7rem;
+    }
 }
