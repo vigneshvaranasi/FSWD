@@ -5,16 +5,19 @@
 body{
     font-family: Arial, sans-serif;
     background-color: #ffffff;
+    overflow-x: hidden;
 }
 nav{
     /* background-color:#fff; */
     background: transparent;
     backdrop-filter: blur(10px);
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     list-style-type: none;
     color: #1f1f1f;
     margin-left: -100px;
+    border-bottom: 1px solid #f4f4f4;
 }
 nav li a{
     text-decoration: none;
@@ -58,20 +61,29 @@ nav ul{
     margin-left: -50px;
     width: 80px;
 }
+/* Hero Section */
 .hero-section{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: center;
     margin: 20px;
+    gap: 50px;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
 }
 .hero-section img{
+    text-align: center;
+    margin-top: 30px;
     max-width: 550px;
     border-radius: 5px;
 }
 .hero-section .heading {
-    margin-left: 90px;
-    padding-top: 90px;
-    width: 450px;
+    padding-top: 50px;
+    max-width: 450px;
     font-size: 4.5rem;
     margin-top: 20px;
 }
@@ -82,6 +94,34 @@ nav ul{
     font-size: 1rem;
     display: block;
 }
+.form-grp{
+    border: 1px solid #1f1f1f;
+    width: fit-content;
+    background-color: #1f1f1f;
+    margin-top:20px;
+}
+.input-text{
+    padding: 10px;
+    font-size: 1rem;
+    width: 200px;
+    border: 1px solid #1f1f1f;
+}
+.form-submit{
+    margin-left: -4px;
+    text-decoration: none;
+    margin-top: 20px;
+    padding: 11px;
+    width: 150px;
+    font-size: 1rem;
+    background-color: #1f1f1f;
+    color: #ffffff;
+}
+.hero-section .caution{
+    margin-top: 10px;
+    color: #494945;
+    display: block;
+
+}
 @media screen and (max-width: 868px){
     nav li a{
         display: none;
@@ -89,5 +129,23 @@ nav ul{
     nav ul li a{
         display: flex;
     }
-    
+}
+@media screen and (max-width:576px) {
+    nav ul{
+        font-size: 0.9rem;
+        margin-left: -150px;
+    }
+    .hero-section img{
+        margin-top: -30px;
+        max-width: 350px;
+    }
+    .hero-section .heading{
+        padding-top: 10px;
+        font-size: 3rem;
+        width: 370px;
+        margin-left: -30px;
+    }
+    .form-grp,.caution{
+        margin-left: -27px;
+    }
 }
