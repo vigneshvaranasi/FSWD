@@ -64,3 +64,5 @@ Learn Full Stack Web Development Using HTML, CSS, Bootstrap JavaScript, Node.js,
 - [ ] Refactor and Seperete All CSS and HTML Files
 - [ ] Make Grid Responsive
 - [ ] Make Image Responsive in media Queries
+- [ ] Fix Assignment 11.3
+- [ ] Add Different Navbars in Flex
