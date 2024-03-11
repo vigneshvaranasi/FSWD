@@ -53,31 +53,32 @@ body{
 }
 @media screen and (max-width: 600px){
     .parent{
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        height: 100%;
+        grid-template-columns: 1fr;
         grid-template-rows:150px 150px 150px 150px 150px 150px ;
     }
     .child1{
-        grid-column: 1 / 6;
+        grid-column: 1 / 2;
         grid-row: 1 / 2;
     }
     .child2{
-        grid-column: 1 / 6;
+        grid-column: 1 / 2;
         grid-row: 2 / 3;
     }
     .child3{
-        grid-column: 1 / 6;
+        grid-column: 1 / 2;
         grid-row: 3 / 4;
     }
     .child4{
-        grid-column: 1 / 6;
+        grid-column: 1 / 2;
         grid-row: 4 / 5;
     }
     .child5{
-        grid-column: 1 / 6;
+        grid-column: 1 / 2;
         grid-row: 5 / 6;
     }
     .child6{
-        grid-column: 1 / 6;
+        grid-column: 1 / 2;
         grid-row: 6 / 7;
     }
 }
