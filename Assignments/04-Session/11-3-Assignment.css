@@ -5,94 +5,84 @@
 body{
     font-family: Arial, sans-serif;
     background-color: #ffffff;
-    overflow-x: hidden;
+    /* margin-top: 80px;  */
 }
 nav{
-    /* background-color:#fff; */
-    background: transparent;
-    backdrop-filter: blur(10px);
+    width: 100%;
+    top: 0;
+    background-color: #ffffff;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     list-style-type: none;
-    color: #1f1f1f;
-    margin-left: -100px;
-    border-bottom: 1px solid #f4f4f4;
-}
-nav li a{
-    text-decoration: none;
-    color: #1f1f1f;
-}
-/* nav li a:hover{
-    background-color: #eaeea9;
-    padding: 7px;
-    border-radius: 5px;
-    margin-left: -20px;
-    margin-top: -20px;
-    margin-bottom: -20px;
-} */
-nav ul li{
-    gap: 30px;
-    margin-left: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-nav li{
-    justify-content: start;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: -150px;
+    border-bottom: 0.5px solid #f4f4f4;
+    /* border-bottom: 1px solid transparent;
+    background-color:transparent;
+    backdrop-filter: blur(50px) ;
+    z-index: 1000;
+    position: fixed; */
 }
 nav ul{
     display: flex;
     list-style: none;
-    font-size: 1em;
-    margin-right: -150px;
+    font-size: 1rem;
+    margin-right:20px;
+    margin-left: 20px;
+}
+nav ul li{
+    margin: 5px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+nav ul li a{
+    padding: 7px;
+    text-decoration: none;
+    color: #1f1f1f;
 }
 .dropdown{
     position: relative;
     top: -1px;
     width: 14px;
-    display: inline-block;
 }
-.logo{
-    margin-top: 20px;
-    margin-bottom: 12px;
-    margin-left: -50px;
-    width: 80px;
-}
-/* Hero Section */
-.hero-section{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    margin: 20px;
-    gap: 50px;
-}
-.text{
-    display: flex;
-    flex-direction: column;
-    padding-left: 20px;
-}
-.hero-section img{
-    text-align: center;
-    margin-top: 30px;
-    max-width: 550px;
+.hc:hover{
+    background-color: #eaeea9;
+    padding: 7px;
     border-radius: 5px;
 }
-.hero-section .heading {
-    padding-top: 50px;
-    max-width: 450px;
-    font-size: 4.5rem;
-    margin-top: 20px;
+.hero-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    margin: 60px;
+    gap: 40px;
 }
-.hero-section p span{
+.text{
+    margin-left: 40px;
+    margin-top: -50px;
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.hero-section .heading{
+    width: 100%;
+    font-size: 4.5rem;
+}
+.hero-section .content{
     color: #494945;
     margin-top: 20px;
     width: 450px;
     font-size: 1rem;
     display: block;
+}
+.hero-section .rampimg{
+    width: 550px;
+}
+.hero-section img{
+    width: 100%;
+    border-radius: 5px;
 }
 .form-grp{
     border: 1px solid #1f1f1f;
@@ -120,32 +110,58 @@ nav ul{
     margin-top: 10px;
     color: #494945;
     display: block;
-
 }
-@media screen and (max-width: 868px){
-    nav li a{
+@media screen and (max-width: 864px){
+    .start-flex .hc{
+        display: none;
+    }    
+    nav {
+        flex-wrap: nowrap;
+    }
+}
+@media screen and (max-width: 374px){ 
+    nav ul{
+        width: fit-content;
+        margin-right:5px;
+        margin-left: 5px;
+        font-size: 0.9rem;
+    }
+    .pricing{
         display: none;
     }
-    nav ul li a{
-        display: flex;
+}
+@media screen and (max-width:1000px) {
+    .hero-section{
+        flex-wrap: wrap;
     }
 }
-@media screen and (max-width:576px) {
-    nav ul{
-        font-size: 0.9rem;
-        margin-left: -150px;
+@media screen and (max-width:492px) {
+    .text{
+        margin: 20px;
+        margin-top: 0px;
+        width: 100%;
     }
-    .hero-section img{
-        margin-top: -30px;
-        max-width: 350px;
+    .hero-section{
+        margin: 10px;
     }
     .hero-section .heading{
-        padding-top: 10px;
         font-size: 3rem;
-        width: 370px;
-        margin-left: -30px;
+        margin-top: 50px;
     }
-    .form-grp,.caution{
-        margin-left: -27px;
+    .hero-section .content{
+        width: 100%;
+    }
+    .input-text{
+        width: 100%;
+    }
+    .form-grp{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .form-submit{
+        margin: 0px;
+        text-align: center;
+        width: 100%;
     }
 }
