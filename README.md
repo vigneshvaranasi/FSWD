@@ -2,8 +2,8 @@
 Learn Full Stack Web Development Using HTML, CSS, Bootstrap JavaScript, Node.js, Express.js, MongoDB, React.js, and Redux.
 
 ## Table of Contents
-1. [HTML](#html)
-2. [CSS](#css)
+1. [HTML](01-HTML/HTML%20README.md)
+2. [CSS](02-CSS/CSS%20README.md)
 3. [Bootstrap](#bootstrap)
 4. [JavaScript](#javascript)
 5. [Node.js](#nodejs)
@@ -12,24 +12,7 @@ Learn Full Stack Web Development Using HTML, CSS, Bootstrap JavaScript, Node.js,
 8. [React.js](#reactjs)
 9. [Redux](#redux)
 
-<!-- ## HTML
 
-1. [Getting Started With Basics](https://vigneshvaranasi.github.io/FSWD/01-Getting%20Started%20with%20Basics!/1.index)
-
-2. Introduction to HTML
-      - [Creating First HTML Page](https://vigneshvaranasi.github.io/FSWD/02-Intro%20to%20HTML/01-Creating%20First%20HTML%20Page)
-      - [Headings](https://vigneshvaranasi.github.io/FSWD/02-Intro%20to%20HTML/02-Headings)
-      - [Paragraphs](https://vigneshvaranasi.github.io/FSWD/02-Intro%20to%20HTML/03-Paragraph)
-      - [Unordered Lists](https://vigneshvaranasi.github.io/FSWD/02-Intro%20to%20HTML/04-Unordered%20Lists)
-      - [Ordered Lists](https://vigneshvaranasi.github.io/FSWD/02-Intro%20to%20HTML/05-Ordered%20List)
-      - [Emphasis](https://vigneshvaranasi.github.io/FSWD/02-Intro%20to%20HTML/06-Emphasis)
-      - [Links](https://vigneshvaranasi.github.io/FSWD/02-Intro%20to%20HTML/07-Anchor%20Tag)
-      - [Images](https://vigneshvaranasi.github.io/FSWD/02-Intro%20to%20HTML/08-Image)
-      - [Video](https://vigneshvaranasi.github.io/FSWD/02-Intro%20to%20HTML/09-Video)
-      - [Audio](https://vigneshvaranasi.github.io/FSWD/02-Intro%20to%20HTML/10-Audio)
-      
-      [Tea Recipe Page](https://vigneshvaranasi.github.io/FSWD/02-Intro%20to%20HTML/Tea%20Recipe)
- -->
 # Hands On Practice
 1. [Employee Card](https://vigneshvaranasi.github.io/FSWD/Hands-On-Practice/01-Employee%20Card/)
 2. [E-Commerce Landing Page](https://vigneshvaranasi.github.io/FSWD/Hands-On-Practice/02-E-Commerce/)
@@ -61,12 +44,11 @@ Learn Full Stack Web Development Using HTML, CSS, Bootstrap JavaScript, Node.js,
 - [ ] Add Border
 - [ ] Add more styles for Lists
 - [ ] Add more On Flexbox
-- [ ] Refactor and Seperete All CSS and HTML Files
 - [ ] Make Grid Responsive
 - [ ] Make Image Responsive in media Queries
-- [ ] Add Different Navbars in Flex
+- [ ] **Add Different Navbars in Flex**
 - [ ] Add more in Bootstrap
-- [ ] Fix Assignment 11.3 - *Now it is OK But Still Need to Fix*
+- [x] Fix Assignment 11.3 - *Now it is OK But Still Need to Fix*
 - [ ] Add Form styles
 - [x] Re Organise File Structure
-- [ ] Add Seperate README's for Each Section
+- [x] Add Seperate README's for Each Section 
