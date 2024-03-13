@@ -12,7 +12,7 @@ Learn Full Stack Web Development Using HTML, CSS, Bootstrap JavaScript, Node.js,
 8. [React.js](#reactjs)
 9. [Redux](#redux)
 
-## HTML
+<!-- ## HTML
 
 1. [Getting Started With Basics](https://vigneshvaranasi.github.io/FSWD/01-Getting%20Started%20with%20Basics!/1.index)
 
@@ -29,7 +29,7 @@ Learn Full Stack Web Development Using HTML, CSS, Bootstrap JavaScript, Node.js,
       - [Audio](https://vigneshvaranasi.github.io/FSWD/02-Intro%20to%20HTML/10-Audio)
       
       [Tea Recipe Page](https://vigneshvaranasi.github.io/FSWD/02-Intro%20to%20HTML/Tea%20Recipe)
-
+ -->
 # Hands On Practice
 1. [Employee Card](https://vigneshvaranasi.github.io/FSWD/Hands-On-Practice/01-Employee%20Card/)
 2. [E-Commerce Landing Page](https://vigneshvaranasi.github.io/FSWD/Hands-On-Practice/02-E-Commerce/)
@@ -68,4 +68,5 @@ Learn Full Stack Web Development Using HTML, CSS, Bootstrap JavaScript, Node.js,
 - [ ] Add more in Bootstrap
 - [ ] Fix Assignment 11.3 - *Now it is OK But Still Need to Fix*
 - [ ] Add Form styles
-- [ ] Re Organise File Structure
+- [x] Re Organise File Structure
+- [ ] Add Seperate README's for Each Section
