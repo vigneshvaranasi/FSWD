@@ -5,7 +5,7 @@
 body{
     font-family: Arial, sans-serif;
     background-color: #ffffff;
-    /* margin-top: 80px;  */
+    margin-top: 80px; 
 }
 nav{
     width: 100%;
@@ -15,12 +15,12 @@ nav{
     flex-wrap: wrap;
     justify-content: space-between;
     list-style-type: none;
-    border-bottom: 0.5px solid #f4f4f4;
-    /* border-bottom: 1px solid transparent;
+    /* border-bottom: 0.5px solid #f4f4f4; */
+    border-bottom: 1px solid transparent;
     background-color:transparent;
     backdrop-filter: blur(50px) ;
     z-index: 1000;
-    position: fixed; */
+    position: fixed;
 }
 nav ul{
     display: flex;
