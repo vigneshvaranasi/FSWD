@@ -4,6 +4,7 @@
     font-size: 2rem;
     margin-top: 10px;
     margin-bottom: 20px;
+    font-family: Arial, sans-serif;
 }
 .page a{
     text-decoration: none;
@@ -17,6 +18,7 @@
     font-size: 2rem;
     display: flex;
     justify-content: space-between;
+    font-family: Arial, sans-serif;
 }
 .np a{
     text-decoration: none;
