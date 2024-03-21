@@ -48,7 +48,4 @@ Learn Full Stack Web Development Using HTML, CSS, Bootstrap JavaScript, Node.js,
 - [ ] Make Image Responsive in media Queries
 - [ ] **Add Different Navbars in Flex**
 - [ ] Add more in Bootstrap
-- [x] Fix Assignment 11.3 - *Now it is OK But Still Need to Fix*
 - [ ] Add Form styles
-- [x] Re Organise File Structure
-- [x] Add Seperate README's for Each Section 
