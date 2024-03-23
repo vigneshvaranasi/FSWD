@@ -1,58 +1,47 @@
-// Function to generate a random number between 1 and 6
-function rollDice() {
-    return Math.floor(Math.random() * 6) + 1;
+// Initialize Three.js variables
+var scene, camera, renderer, cube;
+
+// Initialize device motion variables
+var accelerationX = 0;
+var accelerationY = 0;
+var accelerationZ = 0;
+
+// Initialize gyroscope event handler
+window.addEventListener('devicemotion', function(event) {
+  // Extract acceleration data
+  accelerationX = event.accelerationIncludingGravity.x;
+  accelerationY = event.accelerationIncludingGravity.y;
+  accelerationZ = event.accelerationIncludingGravity.z;
+});
+
+// Initialize Three.js scene
+function init() {
+  scene = new THREE.Scene();
+
+  camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+  camera.position.z = 5;
+
+  var geometry = new THREE.BoxGeometry();
+  var material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+  cube = new THREE.Mesh(geometry, material);
+  scene.add(cube);
+
+  renderer = new THREE.WebGLRenderer();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  document.body.appendChild(renderer.domElement);
 }
 
-// Function to update the dice face
-function updateDice(number) {
-    const diceElement = document.getElementById('dice');
-    diceElement.textContent = number;
+// Update cube position based on device motion
+function animate() {
+  requestAnimationFrame(animate);
+
+  cube.rotation.x += accelerationX / 100;
+  cube.rotation.y += accelerationY / 100;
+  cube.rotation.z += accelerationZ / 100;
+
+  renderer.render(scene, camera);
 }
 
-// Function to show permission message
-function showPermissionMessage() {
-    const permissionMessage = document.getElementById('permissionMessage');
-    permissionMessage.style.display = 'block';
-}
-
-// Shake event initialization
-if (window.DeviceMotionEvent) {
-    const sensitivity = 25; // Adjust this value to set sensitivity of shake
-    let lastAcceleration = { x: null, y: null, z: null };
-    let shakeCount = 0;
-
-    // Function to calculate the absolute acceleration
-    function calculateAcceleration(acceleration) {
-        return Math.sqrt(
-            acceleration.x * acceleration.x +
-            acceleration.y * acceleration.y +
-            acceleration.z * acceleration.z
-        );
-    }
-
-    // Event listener for device motion
-    window.addEventListener('devicemotion', function(e) {
-        const acceleration = e.accelerationIncludingGravity;
-        const currentAcceleration = calculateAcceleration(acceleration);
-
-        if (lastAcceleration.x !== null) {
-            const deltaX = Math.abs(currentAcceleration - lastAcceleration.x);
-            const deltaY = Math.abs(currentAcceleration - lastAcceleration.y);
-            const deltaZ = Math.abs(currentAcceleration - lastAcceleration.z);
-            const maxDelta = Math.max(deltaX, deltaY, deltaZ);
-
-            if (maxDelta > sensitivity) {
-                shakeCount++;
-                if (shakeCount >= 2) { // Adjust this value to set how many shakes trigger the roll
-                    const result = rollDice();
-                    updateDice(result);
-                    shakeCount = 0;
-                }
-            }
-        }
-        lastAcceleration.x = currentAcceleration;
-    });
-} else {
-    // Show permission message if device motion events are not supported
-    showPermissionMessage();
-}
+// Initialize scene and start animation
+init();
+animate();
