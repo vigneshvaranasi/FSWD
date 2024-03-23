@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Device Motion Test</title>
+</head>
+
+<body>
+    <h1>Device Motion Test</h1>
+    <div id="motionData">
+        <p>Acceleration X: <span id="accelerationX">0</span></p>
+        <p>Acceleration Y: <span id="accelerationY">0</span></p>
+        <p>Acceleration Z: <span id="accelerationZ">0</span></p>
+    </div>
+    <script>
+        window.addEventListener('devicemotion', function (event) {
+            // Extract acceleration data
+            var acceleration = event.accelerationIncludingGravity;
+
+            // Update HTML elements with acceleration values
+            document.getElementById('accelerationX').textContent = acceleration.x.toFixed(2);
+            document.getElementById('accelerationY').textContent = acceleration.y.toFixed(2);
+            document.getElementById('accelerationZ').textContent = acceleration.z.toFixed(2);
+        });
+    </script>
+</body>
+
+</html>
