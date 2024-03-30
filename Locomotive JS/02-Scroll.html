@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Locomotive Scroll Example</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+  <style>
+    /* Add your custom styles here */
+    .section {
+      height: 100vh;
+    }
+  </style>
+</head>
+<body data-scroll-container>
+  <div class="section" data-scroll-section>
+    <h1>Section 1</h1>
+  </div>
+  <div class="section" data-scroll-section>
+    <h1>Section 2</h1>
+  </div>
+  <div class="section" data-scroll-section>
+    <h1>Section 3</h1>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+  <script>
+const scroll = new LocomotiveScroll({
+    el: document.querySelector('[data-scroll-container]'),
+    smooth: true,
+    getDirection: true, // Detect scroll direction
+    scrollFromAnywhere: true, // Enable scrolling from any position
+    touchMultiplier: 1, // Increase touch scroll sensitivity
+    tablet: {
+        smooth: false // Disable smooth scrolling on tablet devices
+    }
+});
+
+  </script>
+</body>
+</html>
