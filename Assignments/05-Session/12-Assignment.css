@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+.hero-section{
+    background-color: #e9ebef;
+    height: auto;
+    padding: 70px;
+}
+.card1{
+    width: 370px;
+}
+@media screen and (max-width: 500px){
+    .hero-section{
+        padding: 20px;
+    }
+    .card1{
+        width: 100%;
+    }
+}
