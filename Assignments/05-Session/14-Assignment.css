@@ -1,0 +1,10 @@
+.star{
+    position: relative;
+    top: -2.5px;
+    width: 15px;
+    height: 15px;
+}
+.badgeclass{
+    background-color: #eceb98;
+    color: #3d3c0a !important;
+}
