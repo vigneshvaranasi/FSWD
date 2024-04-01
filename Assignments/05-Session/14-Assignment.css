@@ -4,7 +4,17 @@
     width: 15px;
     height: 15px;
 }
+.badgeclassred{
+    background-color: #fcbca0;
+    color: #612012 !important;
+}
 .badgeclass{
     background-color: #eceb98;
     color: #3d3c0a !important;
+}
+.light_green{
+    color: #1e6055;
+}
+.smallfont{
+    font-size: 13px;
 }
