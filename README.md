@@ -2,10 +2,10 @@
 Learn Full Stack Web Development Using HTML, CSS, Bootstrap JavaScript, Node.js, Express.js, MongoDB, React.js, and Redux.
 
 ## Table of Contents
-1. [HTML](01-HTML/HTML%20README.md)
-2. [CSS](02-CSS/CSS%20README.md)
-3. [Bootstrap](03-Bootstrap/Bootstrap%20README.md)
-4. [JavaScript](04-JavaScript/JS%20README.md)
+1. [HTML](01-HTML/README.md)
+2. [CSS](02-CSS/README.md)
+3. [Bootstrap](03-Bootstrap/README.md)
+4. [JavaScript](04-JavaScript/README.md)
 5. [Node.js](#nodejs)
 6. [Express.js](#expressjs)
 7. [MongoDB](#mongodb)
