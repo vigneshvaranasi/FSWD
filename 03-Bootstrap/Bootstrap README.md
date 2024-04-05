@@ -20,3 +20,4 @@
 18. [Card](https://vigneshvaranasi.github.io/FSWD/03-Bootstrap/18-Card.html)
 19. [Modal](https://vigneshvaranasi.github.io/FSWD/03-Bootstrap/19-Modal.html)
 20. [Navbar](https://vigneshvaranasi.github.io/FSWD/03-Bootstrap/20-Navbar.html)
+20. [Buttons](https://vigneshvaranasi.github.io/FSWD/03-Bootstrap/21-Buttons.html)
