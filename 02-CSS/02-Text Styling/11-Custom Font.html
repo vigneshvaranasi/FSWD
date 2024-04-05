@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Font from File</title>
+</head>
+<style>
+  @font-face {
+      font-family: 'SF Apple font'; /* Custom font name */
+      src: url('SF-Pro-Text-Semibold.otf') format('opentype');
+  }
+  .custom {
+    font-family: 'SF Apple font'; /* Fallback font */
+    font-size: 2rem;
+  }
+  .regular {
+    font-size: 2rem;
+  }
+</style>
+<body>
+    <p class="custom">Custom Font</p>
+    <p class="regular">Regular Font</p>
+</body>
+</html>
