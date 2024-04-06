@@ -1,4 +1,4 @@
-console.log("\n2. Create Student object with properties roll number, name, marks(array),address and method to compute aggregate of marks");
+console.log("2. Create Student object with properties roll number, name, marks(array),address and method to compute aggregate of marks");
 let studentDetails={
     roll:"22501A05J1",
     name:"Vignesh Varanasi",
