@@ -43,7 +43,16 @@ Learn Full Stack Web Development Using HTML, CSS, Bootstrap JavaScript, Node.js,
 16. [Assignment 16](https://vigneshvaranasi.github.io/FSWD/Assignments/05-Session/16-Assignment)
 17. [Assignment 17](https://vigneshvaranasi.github.io/FSWD/Assignments/05-Session/17-Assignment)
 18. [Assignment 18.1](https://vigneshvaranasi.github.io/FSWD/Assignments/06-Session/18-Assignments/18-1-Assignment)
-
+[Assignment 18.2](https://vigneshvaranasi.github.io/FSWD/Assignments/06-Session/18-Assignments/18-2-Assignment)
+[Assignment 18.3](https://vigneshvaranasi.github.io/FSWD/Assignments/06-Session/18-Assignments/18-3-Assignment)
+19. [Assignment 19.1](https://vigneshvaranasi.github.io/FSWD/Assignments/06-Session/19-Assignments/19-1-Assignment)
+[Assignment 19.2](https://vigneshvaranasi.github.io/FSWD/Assignments/06-Session/19-Assignments/19-2-Assignment)
+[Assignment 19.3](https://vigneshvaranasi.github.io/FSWD/Assignments/06-Session/19-Assignments/19-3-Assignment)
+20. [Assignment 20.1](https://vigneshvaranasi.github.io/FSWD/Assignments/06-Session/20-Assignments/20-1-Assignment)
+[Assignment 20.2](https://vigneshvaranasi.github.io/FSWD/Assignments/06-Session/20-Assignments/20-2-Assignment)
+21. [Assignment 21.1](https://vigneshvaranasi.github.io/FSWD/Assignments/06-Session/21-Assignments/21-1-Assignment)
+[Assignment 21.2](https://vigneshvaranasi.github.io/FSWD/Assignments/06-Session/21-Assignments/21-2-Assignment)
+[Assignment 21.3](https://vigneshvaranasi.github.io/FSWD/Assignments/06-Session/21-Assignments/21-3-Assignment)
  
 # To Do
 - [ ] Add Box Modal
