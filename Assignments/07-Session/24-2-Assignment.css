@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #f7dfe2;
+    font-family: "Montserrat", sans-serif;
+}
+.login-card{
+    display: flex;
+    max-width: 800px;
+    margin: 45px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+.login-card .left{
+    padding: 20px;
+    width: 50%;
+    text-align: center;
+    padding-bottom: 60px;
+}
+.login-card .right{
+    width: 50%;
+}
+.left .heading{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 100%;
+    font-size: 2rem;
+}
+.left .img-container{
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.left img{
+    width: 20px;
+    margin: 5px;
+    padding: 9px;
+    border: 0.5px solid #000;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.left .form{
+    margin: 20px;
+}
+.left p{
+    font-size: 0.9rem;
+    margin-top: 30px;
+}
+.left form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px;
+    margin-top: auto;
+    margin-bottom: 0;
+    
+}
+.left form input{
+    width: 100%;
+    padding: 12px;
+    margin: 8px;
+    border: 0.5px solid #eeeeee;
+    border-radius: 1px;
+    background-color: #eeeeee;
+}
+.left .forgotpass{
+    margin-top: 10px;
+    font-size: 1rem;
+    margin-bottom: 25px;
+    display: block;
+    text-decoration: none;
+    color: #000000;
+}
+.left .forgotpass:hover{
+    text-decoration: underline;
+}
+.left .login{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 10px;
+    padding-left: 40px;
+    padding-right:40px;
+    border-radius: 30px;
+    background-color: #ff3104;
+    color: #fff;
+    font-size: 1.1rem;
+    text-decoration: none;
+    font-weight: 600;
+}
+.left .login:hover{
+    background-color: #fd7759;
+}
+.login-card .right{
+    background-color: #ff264f;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    padding: 20px;
+    width: 50%;
+    text-align: center;
+    padding-bottom: 60px;
+    align-items: center;
+    border-radius: 0px 10px 10px 0px;
+}
+.right h1{
+    font-size: 2.3rem;
+    padding: 20px;
+    padding-bottom: 0;
+}
+.right p{
+    font-size: 1rem;
+    padding-top:0;
+    padding: 20px;
+}
+@media screen and (max-width: 500px){
+    .login-card .right{
+        display: none;
+    }
+    .login-card .left{
+        width: 100%;
+    }
+    .login-card{
+        margin: 20px;
+    }
+    .left form {
+        margin: 10px;
+    }    
+}
+@media screen and (max-width: 800px){
+    .login-card{
+        margin: 20px;
+    }
+    
+}
