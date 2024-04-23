@@ -6,7 +6,6 @@
 | Landing Page      | [Assignment 1](https://vigneshvaranasi.github.io/FSWD/Assignments/01-Session/01-Assignment) |
 | Grid Layout       | [Assignment 2](https://vigneshvaranasi.github.io/FSWD/Assignments/01-Session/02-Assignment) |
 | Responsive Design| [Assignment 3](https://vigneshvaranasi.github.io/FSWD/Assignments/01-Session/03-Assignment) |
- 
 ## Session 2
 | Assignment        | Link                                                                                  |
 |-------------------|---------------------------------------------------------------------------------------|
