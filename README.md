@@ -67,6 +67,5 @@ Learn Full Stack Web Development Using HTML, CSS, Bootstrap JavaScript, Node.js,
 - [ ] Add more On Flexbox
 - [ ] Make Grid Responsive
 - [ ] Make Image Responsive in media Queries
-- [ ] **Add Different Navbars in Flex**
 - [ ] Add more in Bootstrap
 - [ ] Add Form styles
