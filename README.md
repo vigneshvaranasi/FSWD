@@ -59,7 +59,7 @@ Learn Full Stack Web Development Using HTML, CSS, Bootstrap JavaScript, Node.js,
 24. [Assignment 24.1](https://vigneshvaranasi.github.io/FSWD/Assignments/07-Session/24-1-Assignment)
 [Assignment 24.2](https://vigneshvaranasi.github.io/FSWD/Assignments/07-Session/24-2-Assignment)
 # To Do
-- [ ] Add Box Modal
+- [ ] Add Box Modal 
 - [ ] Add Background Images
 - [ ] Add CSS Units
 - [ ] Add Border
