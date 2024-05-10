@@ -10,7 +10,7 @@ Learn Full Stack Web Development Using HTML, CSS, Bootstrap JavaScript, Node.js,
 6. [Express.js](#expressjs)
 7. [MongoDB](#mongodb)
 8. [React.js](#reactjs)
-9. [Redux](#redux)
+9. [Redux](#redux) 
 
  
 # Hands On Practice
