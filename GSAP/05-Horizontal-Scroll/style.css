@@ -18,7 +18,7 @@ body{
     background-color: #111;
     overflow-x: hidden;
 }
-#page1,#page2,#page3{
+#page1,#page3{
     height: 100%;
     width: 100%;
 }
@@ -28,7 +28,12 @@ body{
     align-items: center;
 }
 #page2{
+    /* height: 100%;
+    width: 100%; */
+    height: auto;
+    width: auto;
     background-color: #67c3eb;
+    padding: 20px;
 }
 #page2 h2{
     /* padding: 5vw 0; */

@@ -16,16 +16,53 @@ gsap.from("#page3 h1",{
         start:"top 10%",
     }
 })
-gsap.to("#page2 h2",{
-    transform:"translateX(-590%)",
-    scrollTrigger:{
-        trigger:"#page2",
-        scroller:"body",
-        // markers:true,
-        start:"top 0%",
-        end:"top -100%",
-        scrub:1,
-        pin:true,
-    }
-})
+// gsap.to("#page2 h2",{
+//     transform:"translateX(-615%)",
+//     scrollTrigger:{
+//         trigger:"#page2",
+//         scroller:"body",
+//         // markers:true,
+//         start:"top 25%",
+//         end:"top -100%",
+//         scrub:1,
+//         pin:true,
+//     }
+// })
+
+gsap.registerPlugin(ScrollTrigger);
+
+ScrollTrigger.matchMedia({
+  // For large screens
+  "(min-width: 1024px)": function() {
+    gsap.to("#page2 h2", {
+      transform: "translateX(-615%)",
+      scrollTrigger: {
+        trigger: "#page2",
+        scroller: "body",
+        // markers: true,
+        start: "top -20%",
+        end: "top -100%",
+        scrub: 1,
+        pin: true,
+      }
+    });
+  },
+
+  // For small screens
+  "(max-width: 500px)": function() {
+    gsap.to("#page2 h2", {
+      transform: "translateX(-615%)",
+      scrollTrigger: {
+        trigger: "#page2",
+        scroller: "body",
+        // markers: true,
+        start: "top 25%",
+        end: "top -100%",
+        scrub: 1,
+        pin: true,
+      }
+    });
+  }
+});
+
 
