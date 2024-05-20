@@ -12,7 +12,7 @@ h1{
     color: rgb(219, 219, 219);
     text-align: center;
     margin: 20px;
-    font-size: 4rem;
+    font-size: 3rem;
 }
 body{
     background-color: #111;
@@ -38,7 +38,7 @@ body{
 #page2 h2{
     /* padding: 5vw 0; */
     color: rgb(28, 28, 28);
-    font-size: 55vw;
+    font-size: 20vw;
     white-space: nowrap;
     text-transform: uppercase;
 }

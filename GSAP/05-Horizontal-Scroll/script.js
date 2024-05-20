@@ -17,7 +17,7 @@ gsap.from("#page3 h1",{
     }
 })
 // gsap.to("#page2 h2",{
-//     transform:"translateX(-615%)",
+//     transform:"translateX(-170%)",
 //     scrollTrigger:{
 //         trigger:"#page2",
 //         scroller:"body",
@@ -35,12 +35,12 @@ ScrollTrigger.matchMedia({
   // For large screens
   "(min-width: 1024px)": function() {
     gsap.to("#page2 h2", {
-      transform: "translateX(-615%)",
+      transform: "translateX(-170%)",
       scrollTrigger: {
         trigger: "#page2",
         scroller: "body",
         // markers: true,
-        start: "top -20%",
+        start: "top 25%",
         end: "top -100%",
         scrub: 1,
         pin: true,
@@ -48,15 +48,31 @@ ScrollTrigger.matchMedia({
     });
   },
 
-  // For small screens
-  "(max-width: 500px)": function() {
+  // For Medium screens
+  "(min-width: 500px)": function() {
     gsap.to("#page2 h2", {
-      transform: "translateX(-615%)",
+      transform: "translateX(-200%)",
       scrollTrigger: {
         trigger: "#page2",
         scroller: "body",
         // markers: true,
-        start: "top 25%",
+        start: "top 23%",
+        end: "top -100%",
+        scrub: 1,
+        pin: true,
+      }
+    });
+    },
+
+  // For small screens
+  "(max-width: 500px)": function() {
+    gsap.to("#page2 h2", {
+      transform: "translateX(-180%)",
+      scrollTrigger: {
+        trigger: "#page2",
+        scroller: "body",
+        // markers: true,
+        start: "top 35%",
         end: "top -100%",
         scrub: 1,
         pin: true,
