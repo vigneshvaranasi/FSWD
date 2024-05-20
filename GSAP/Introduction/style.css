@@ -6,17 +6,59 @@
 html,body{
     height: 100%;
     width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    color: white;
+    text-align: center;
+    margin: 20px;
+}
+h2{
+    color: white;
+    text-align: start;
+    margin: 40px;
 }
 body{
     background-color: #111;
 }
+#box1,#box2,#box3,#box4,#box5,#box6,#box7,#box8,#box9,#box10,#box11,#box12,#box13,#box14,#box15,#box16{
+    height: 200px;
+    width: 200px;
+}
 #box1{
-    height: 300px;
-    width: 300px;
     background-color: crimson;
 }
 #box2{
-    height: 300px;
-    width: 300px;
     background-color: lightseagreen;
+}
+#box3{
+    background-color: darkorange;
+}
+#box4{
+    background-color: darkviolet;
+}
+#box5{
+    background-color: palegreen;
+}
+#box6{
+    background-color: darkslategray;
+}
+#box7{
+    background-color: darkred;
+}
+#box8{
+    background-color: darkgreen;
+}
+#box9{
+    background-color: wheat;
+    border-radius: 50%;
+}
+#box10{
+    background-color: darkgoldenrod;
+}
+#box11{
+    background-color: darkmagenta;
+}
+#box12{
+    background-color: darkolivegreen;
 }
