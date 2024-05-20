@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    color: rgb(219, 219, 219);
+    text-align: center;
+    margin: 20px;
+    font-size: 4rem;
+}
+body{
+    background-color: #111;
+    overflow-x: hidden;
+}
+#page1,#page2,#page3{
+    height: 100%;
+    width: 100%;
+}
+#page1,#page3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#page2{
+    background-color: #67c3eb;
+}
+#page2 h2{
+    /* padding: 5vw 0; */
+    color: rgb(28, 28, 28);
+    font-size: 55vw;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
