@@ -9,29 +9,16 @@ html,body{
     font-family: Arial, Helvetica, sans-serif;
 }
 h1{
-    color: rgb(227, 227, 227);
+    color: white;
     text-align: center;
     margin: 20px;
-}
-h2{
-    color: rgb(220, 220, 220);
-    text-align: start;
-    margin: 10px;
-    font-size: 1.5rem;
-}
-h3{
-    color: rgb(220, 220, 220);
-    text-align: start;
-    padding-top: 20px;
-    margin: 10px;
-    font-size: 1.8rem;
 }
 body{
     background-color: #111;
 }
 #box1,#box2,#box3{
-    height: 200px;
-    width: 200px;
+    height:150px;
+    width: 150px;
     margin: 10px;
 }
 #box1{
