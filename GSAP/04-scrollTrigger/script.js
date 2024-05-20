@@ -7,18 +7,18 @@ gsap.from("#page1 .mainhead",{
 gsap.from("#page2 h2",{
     opacity:0,
     duration:2,
-    x: 500,
+    x: 400,
     scrollTrigger:{
         trigger:"#page2 h2",
         scroller:"body",
-        markers:true,
+        // markers:true,
         start:"top 60%",
     }
 })
 gsap.from("#page2 h3",{
     opacity:0,
     duration:2,
-    x: -500,
+    x: -400,
     scrollTrigger:{
         trigger:"#page2 h3",
         scroller:"body",
@@ -33,7 +33,7 @@ gsap.from("#page3 h2",{
     scrollTrigger:{
         trigger:"#page3 h2",
         scroller:"body",
-        markers:true,
+        // markers:true,
         start:"top 90%",
         scrub:true,
     }
@@ -45,7 +45,7 @@ gsap.from("#page3 h3",{
     scrollTrigger:{
         trigger:"#page3 h3",
         scroller:"body",
-        markers:true,
+        // markers:true,
         start:"top 90%",
         scrub:true,
     }
