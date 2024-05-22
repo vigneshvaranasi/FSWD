@@ -11,6 +11,7 @@ Learn Full Stack Web Development Using HTML, CSS, Bootstrap JavaScript, Node.js,
 7. [MongoDB](#mongodb)
 8. [React.js](#reactjs)
 9. [Redux](#redux) 
+10. [GSAP](GSAP/README.md)
 
  
 # Hands On Practice

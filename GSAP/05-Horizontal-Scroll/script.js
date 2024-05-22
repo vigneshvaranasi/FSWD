@@ -56,7 +56,7 @@ ScrollTrigger.matchMedia({
         trigger: "#page2",
         scroller: "body",
         // markers: true,
-        start: "top 23%",
+        start: "top 24%",
         end: "top -100%",
         scrub: 1,
         pin: true,
