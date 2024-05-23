@@ -8,3 +8,4 @@
 7. [Custom Cursor](https://vigneshvaranasi.github.io/FSWD/GSAP/07-Custom-Cursor/)
 8. [Text Animation](https://vigneshvaranasi.github.io/FSWD/GSAP/08-Text-Animation/)
 9. [Animated Website](https://vigneshvaranasi.github.io/FSWD/GSAP/09-Animated-Website/) --> To Do
+10. [Fan Rotate on Scroll](https://vigneshvaranasi.github.io/FSWD/GSAP/10-Fan-Scroll-Animation/)
