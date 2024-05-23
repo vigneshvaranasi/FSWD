@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    color: rgb(219, 219, 219);
+    text-align: center;
+    margin: 20px;
+    font-size: 3rem;
+}
+body{
+    background-color: #111;
+}
+#string{
+    height:500px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+}
+svg {
+    width: 100vw;
+    height: auto;
+    /* background-color:brown ; */
+}
+#string svg {
+    stroke: #fff;
+    stroke-width: 2;
+    width: 100%;
+    height: 100%;
+}
