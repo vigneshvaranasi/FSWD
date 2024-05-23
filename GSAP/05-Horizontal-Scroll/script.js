@@ -49,7 +49,7 @@ ScrollTrigger.matchMedia({
   },
 
   // For Medium screens
-  "(min-width: 500px)": function() {
+  "(min-width: 500px) and (max-width:1023px)": function() {
     gsap.to("#page2 h2", {
       transform: "translateX(-200%)",
       scrollTrigger: {
