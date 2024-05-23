@@ -3,7 +3,7 @@ gsap.to("#page2 img", {
     scrollTrigger: {
         trigger: "#page2",
         scroller: "body",
-        markers: true,
+        // markers: true,
         scrub: 1,
         pin: true,
         endTrigger: "#page3",
