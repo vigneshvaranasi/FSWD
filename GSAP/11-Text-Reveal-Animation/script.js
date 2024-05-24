@@ -10,7 +10,11 @@ gsap.from('#cursor', {
     duration: 0.4,
 });
 
+// Repeat the animation infinitely
 let masterTl = gsap.timeline({ repeat: -1, repeatDelay: 1 });
+
+// The Animation Works only one time without repeating Infinite times
+// let masterTl = gsap.timeline();
 
 words.forEach(word => {
     masterTl.to('#text', { duration: 1, text: word, ease: 'none', delay: 1 });
