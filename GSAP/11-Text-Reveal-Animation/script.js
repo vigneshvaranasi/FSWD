@@ -23,5 +23,5 @@ const word = ['Hello']
 let masterTl2 = gsap.timeline({ repeat: -1, repeatDelay: 1 });
 
 word.forEach(letter => {
-    masterTl2.to('#text1', { duration: 1, text: letter, ease: 'none', delay: 1,});
+    masterTl2.to('#text1', { duration: 1, text: letter, delay: 1,});
 });
