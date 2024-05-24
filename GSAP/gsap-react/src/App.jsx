@@ -8,8 +8,10 @@ const App = () => {
   useGSAP(()=>{
     tl.to('#box', { 
       rotation: 360, 
-      x: 400, 
-      duration: 2 
+      x: 300, 
+      duration: 2 ,
+      repeat: -1,
+      yoyo: true,
     })
   })
 
@@ -17,7 +19,9 @@ const App = () => {
     tl.to('#box', { 
       rotation: 0, 
       x: 0, 
-      duration: 2 
+      duration: 2 ,
+      repeat: -1,
+      yoyo: true,
     })
   })
 
