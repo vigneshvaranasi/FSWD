@@ -9,3 +9,4 @@
 8. [Text Animation](https://vigneshvaranasi.github.io/FSWD/GSAP/08-Text-Animation/)
 9. [Animated Website](https://vigneshvaranasi.github.io/FSWD/GSAP/09-Animated-Website/) --> To Do
 10. [Fan Rotate on Scroll](https://vigneshvaranasi.github.io/FSWD/GSAP/10-Fan-Scroll-Animation/)
+11. [GSAP React Integration](https://gsap-react-theta.vercel.app/)
