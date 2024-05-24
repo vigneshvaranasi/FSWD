@@ -10,6 +10,7 @@
 9. [Animated Website](https://vigneshvaranasi.github.io/FSWD/GSAP/09-Animated-Website/) --> To Do
 10. [Fan Rotate on Scroll](https://vigneshvaranasi.github.io/FSWD/GSAP/10-Fan-Scroll-Animation/)
 11. [Text Reveal Animation](https://vigneshvaranasi.github.io/FSWD/GSAP/11-Text-Reveal-Animation/)
+12. [Text Effect Animation](https://vigneshvaranasi.github.io/FSWD/GSAP/12-Text-Effect/)
 
 
 
