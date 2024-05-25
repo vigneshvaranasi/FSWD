@@ -1,11 +1,10 @@
 let tl = gsap.timeline()
-let t2 = gsap.timeline()
 
 tl.from('#page1 h1',{
     duration: 1,
     opacity: 0,
-    delay: 0.4,
-    ease: "expo.out",
+    delay: 0.5,
+    ease: "expoScale(0.5,7,none)",
 })
 tl.to('#page1 h1 .letter-a',{
     duration: 1,
