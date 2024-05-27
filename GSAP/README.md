@@ -11,6 +11,8 @@
 10. [Fan Rotate on Scroll](https://vigneshvaranasi.github.io/FSWD/GSAP/10-Fan-Scroll-Animation/)
 11. [Text Reveal Animation](https://vigneshvaranasi.github.io/FSWD/GSAP/11-Text-Reveal-Animation/)
 12. [Text Effect Animation](https://vigneshvaranasi.github.io/FSWD/GSAP/12-Text-Effect/)
+13. [Text Effect Randomise](https://vigneshvaranasi.github.io/FSWD/GSAP/13-Text-Randomise/)
+14. [Dots to Text Animation ](https://vigneshvaranasi.github.io/FSWD/GSAP/14-Dot-to-Text-Animation/)
 
 
 
