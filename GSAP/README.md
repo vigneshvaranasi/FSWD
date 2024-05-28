@@ -13,6 +13,7 @@
 12. [Text Effect Animation](https://vigneshvaranasi.github.io/FSWD/GSAP/12-Text-Effect/)
 13. [Text Effect Randomise](https://vigneshvaranasi.github.io/FSWD/GSAP/13-Text-Randomise/)
 14. [Dots to Text Animation ](https://vigneshvaranasi.github.io/FSWD/GSAP/14-Dot-to-Text-Animation/)
+14. [Increasing Dots Text Animation ](https://vigneshvaranasi.github.io/FSWD/GSAP/15-Increasing-Dots/)
 
 
 
