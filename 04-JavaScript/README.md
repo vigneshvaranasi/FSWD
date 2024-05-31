@@ -26,3 +26,7 @@
 
 ## Variables
 1. [Variables Introduction](https://vigneshvaranasi.github.io/FSWD/04-JavaScript/01-Variables/01-Variables-Introduction/)
+
+
+## DOM Manipulation
+1. [DOM Basics](https://vigneshvaranasi.github.io/FSWD/04-JavaScript/18-DOM Manipulation/01-Dom/)
