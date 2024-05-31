@@ -34,3 +34,4 @@
 3. [DOM Counter Example](https://vigneshvaranasi.github.io/FSWD/04-JavaScript/18-DOM%20Manipulation/03-Counter)
 3. [DOM Array Display](https://vigneshvaranasi.github.io/FSWD/04-JavaScript/18-DOM%20Manipulation/04-Array)
 3. [DOM Array add new Number ](https://vigneshvaranasi.github.io/FSWD/04-JavaScript/18-DOM%20Manipulation/05-Array_Change)
+3. [DOM Calculator ](https://vigneshvaranasi.github.io/FSWD/04-JavaScript/18-DOM%20Manipulation/06-Calculator)

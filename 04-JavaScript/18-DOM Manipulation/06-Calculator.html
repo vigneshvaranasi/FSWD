@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Calculator</title>
+</head>
+<style>
+    body{
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        margin: 20px;
+        padding: 0;
+        background-color: #080808;
+        color:#d6d6d6;
+        text-align: center;
+    }
+    h1{
+        margin: 0;
+        margin-top: 50px;
+        margin-bottom: 40px;
+        font-size: 2rem;
+    }
+    form{
+        display: block;
+
+    }
+    form input{
+        margin-bottom: 20px;
+    }
+    .output{
+        display: none;
+    }
+    
+</style>
+<body>
+    <h1 class="heading">Calculator Using DOM</h1> 
+    <form>
+        <input type="number" name="first" id="first">
+        <input type="number" name="second" id="second">
+        <button type="submit">+</button>
+    </form>
+    <h1 class="output">Result: <span class="out"></span> </h1>
+    <script src="calci.js"></script> 
+</body>
+</html>
