@@ -29,4 +29,8 @@
 
 
 ## DOM Manipulation
-1. [DOM Basics](https://vigneshvaranasi.github.io/FSWD/04-JavaScript/18-DOM Manipulation/01-Dom/)
+1. [DOM Basics](https://vigneshvaranasi.github.io/FSWD/04-JavaScript/18-DOM%20Manipulation/01-Dom)
+2. [DOM Interactive](https://vigneshvaranasi.github.io/FSWD/04-JavaScript/18-DOM%20Manipulation/02-Interactive)
+3. [DOM Counter Example](https://vigneshvaranasi.github.io/FSWD/04-JavaScript/18-DOM%20Manipulation/03-Counter)
+3. [DOM Array Display](https://vigneshvaranasi.github.io/FSWD/04-JavaScript/18-DOM%20Manipulation/04-Array)
+3. [DOM Array add new Number ](https://vigneshvaranasi.github.io/FSWD/04-JavaScript/18-DOM%20Manipulation/05-Array_Change)
