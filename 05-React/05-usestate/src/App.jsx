@@ -19,7 +19,17 @@ function App(){
   }
 
   function addSkill(){
-    setSkill([...skills,'React']);
+    // Add React Skill at the End of the Array
+    // setSkill([...skills,'React']);
+
+    // Add React Skill at the Start of the Array
+    // setSkill(['React',...skills]);
+
+    // Add NodeJS Skill at the Middle of the Array
+    let arrCopy = [...skills];
+    arrCopy.splice(1,0,'NodeJS');
+    setSkill(arrCopy);
+
   }
   return(
     <>
