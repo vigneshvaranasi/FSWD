@@ -7,7 +7,7 @@ function Item(props) {
     <Card className="m-0 mb-1 p-0 rounded-0">
       <div className="row no-gutters">
         <div className="col-12">
-          <Card.Img className="image w-100 h-auto p-2" src={props.data.image} alt={props.data.title} />
+          <Card.Img className="image w-100 h-fixed p-2" src={props.data.image} alt={props.data.title} />
         </div>
         <div className="col-12 p-0">
           <Card.Body className="p-3">
