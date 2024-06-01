@@ -1,8 +1,9 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-body{
+
+body {
     background-color: #171717;
     font-family: Arial, sans-serif;
     color: #e1e1e1;
@@ -10,39 +11,48 @@ body{
     flex-direction: column;
     align-items: center;
 }
-.heading{
+
+.heading {
     text-align: center;
     margin-top: 20px;
     font-size: 2rem;
 }
-.head2{
+
+.head2 {
     text-align: center;
     margin: 30px;
     font-size: 1.5rem;
 }
-form{
+
+form {
     /* display: flex;
     flex-direction: column;
     align-items: center; */
     margin: 20px;
     font-size: 1.3rem;
 }
-form input{
+
+form input {
     margin: 10px;
 }
-#output{
+
+button {
+    padding: 0.3rem 0.5rem;
+    font-size: 1rem;
+    margin: 0.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline;
+}
+
+#output {
     margin: 20px;
     font-size: 1.1rem;
     display: none;
     max-width: 300px;
     text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
-button{
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    margin: 0.5rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    display: inline;
-  }
