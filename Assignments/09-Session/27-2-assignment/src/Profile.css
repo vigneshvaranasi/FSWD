@@ -1,0 +1,28 @@
+.card{
+    width: 350px;
+    margin: 20px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    height: auto;
+}
+.card img{
+    border-radius: 15px 15px 0 0;
+    width: 100%;
+    height: 200px;
+}
+.profilepic{
+    width: 110px;
+    height:110px;
+    position: relative;
+    margin-top: -60px;
+    margin-left: 20px;
+}
+.profilepic img{
+    width: 100%;
+    height: 100%;
+}
+
+.content{
+    padding: 10px 20px;
+}
