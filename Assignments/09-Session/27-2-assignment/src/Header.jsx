@@ -9,15 +9,19 @@ function Header(){
     return (
         <div className="header">
             <ul>
+                <div>
                 <li><a href=""><img src={logo} alt="" className='logo'/></a></li>
-                <li><a href="">Home</a></li>
-                <li><a href="">About Author</a></li>
-                <li><a href="">About this Project</a></li>
+                </div>
+                <div>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About Author</a></li>
+                    <li><a href="">About this Project</a></li>
+                </div>
             </ul>
-            <ul>
-                <li><a href=""><img src={github} alt="" /></a></li>
-                <li><a href=""><img src={linkedin} alt="" /></a></li>
-                <li><a href=""><img src={insta} alt="" /></a></li>
+            <ul className='contact'>
+                <li className='con'><a href=""><img src={github} alt="" /></a></li>
+                <li className='con'><a href=""><img src={linkedin} alt="" /></a></li>
+                <li className='con'><a href=""><img src={insta} alt="" /></a></li>
             </ul>
         </div>
     )

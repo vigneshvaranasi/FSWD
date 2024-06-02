@@ -1,33 +1,56 @@
 .header{
     display: flex;
     justify-content: space-between;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.5rem;
     background-color: #dfdfdf;
-    width: 100%;
+    color: white;
+    font-size: 1.2rem;
 }
-.header ul{
+.header ul {
     display: flex;
-    list-style: none;
     align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+.header ul .con a img{
+    width: 20px;
+    height: 20px;
+}
+.header ul li{
+    margin: 0 20px;
 }
 .header ul li a{
-    margin: 0px 20px;
     text-decoration: none;
-    color: #000000;
-}
-.header ul li a img{
-    width: 30px;
-    height: 30px;
-}
-.header ul li a .logo{
-    text-decoration: none;
-    color: #000000;
-    margin-left: -30px;
-    width: auto;
-    height: auto;
-    margin-top: 15px;
+    color: rgb(0, 0, 0);
 }
 .header ul li a:hover{
     text-decoration: underline;
+}
+.logo{
+    margin-top: 8px;
+    width: 50px;
+    margin-left: 0;
+}
+.header ul div{
+    display: flex;
+}
+@media screen and (max-width: 768px){
+    .header{
+        flex-direction: column;
+        align-items: center;
+        font-size: 1rem;
+    }
+    .header ul{
+        flex-direction: column;
+        align-items: center;
+    }
+    .header .contact{
+        flex-direction: row;
+        
+    }
+    .logo{
+        margin: 8px;
+        width: 80px;
+        margin-left: -20px;
+    }
+     
 }
