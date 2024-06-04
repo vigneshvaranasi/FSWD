@@ -8,6 +8,7 @@ nav{
 nav ul{
     display: flex;
     list-style: none;
+    margin: 20px;
 }
 nav ul li a{
     margin: 0 10px;
@@ -17,21 +18,43 @@ nav ul li a{
 .logo{
     text-decoration: none;
     color: #000000;
-    margin-left: -30px;
+    width:70px;
+    margin-left: -15px;
+    margin-top: 16px;
+}
+.logo a img{
+    width: 100%;
 }
 nav ul li a:hover{
     text-decoration: underline;
 }
 @media screen and (max-width: 500px){
     nav{
-        flex-direction: column;
-        align-items: center;
-    }
-    nav ul li{
-        margin: 10px;
+        font-size: 1.1rem;
+        padding: 5px;
     }
     .logo{
-        margin:0;
+        width: 50px;
+        margin-top: 20px;
     }
-    
+    nav ul li a{
+        margin: 0 5px;
+    }
+}
+@media screen and (max-width: 390px){
+    nav{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: -50px;
+        padding: 10px;
+    }
+    .logo{
+        width: 70px;
+        margin: auto 0;
+        margin-left: -10px;
+    }
+    nav ul li a{
+        margin: 0 5px;
+    }
 }
