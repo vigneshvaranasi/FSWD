@@ -18,17 +18,17 @@ function App() {
         {/* Username */}
         <div className="mt-2">
           <label htmlFor="username" className="form-lable">Username</label>
-          <input type="text" {...register('username')} id="username" className="form-control" />
+          <input type="text" {...register('username')} id="username" className="form-control mt-1" />
         </div>
         {/* DOB */}
-        <div className="mt-2">
+        <div className="mt-3">
           <label htmlFor="dob" className="form-lable">Date Of Birth</label>
-          <input type="date" {...register('dob')} id="dob" className="form-control" />
+          <input type="date" {...register('dob')} id="dob" className="form-control mt-1" />
         </div>
         {/* City */}
-        <div className="mt-2">
+        <div className="mt-3">
           <label htmlFor="city" className="form-lable">City</label>
-          <input type="text" {...register('city')} id="city" className="form-control" />
+          <input type="text" {...register('city')} id="city" className="form-control mt-1" />
         </div>
         {/* Submit */}
         <div>
