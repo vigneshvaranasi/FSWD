@@ -4,6 +4,7 @@ import {createBrowserRouter,RouterProvider} from 'react-router-dom'
 import Register from './Register';
 import Login from './Login';
 import Home from './Home';
+import Users from './Users';
 
 function App(){
 
@@ -24,9 +25,12 @@ function App(){
       {
         path:'login',
         element:<Login/>
-
-      }]
-    },
+      },
+      {
+        path:'users',
+        element:<Users/>
+      }
+    ]},
 
   ]);
   return (

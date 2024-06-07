@@ -12,6 +12,9 @@ function Navbar(){
                 <li className='nav-item'>
                     <Link to="login" className='nav-link text-white'>Login</Link>
                 </li>
+                <li className='nav-item'>
+                    <Link to="users" className='nav-link text-white'>Users</Link>
+                </li>
             </ul>
         </div>
     )
