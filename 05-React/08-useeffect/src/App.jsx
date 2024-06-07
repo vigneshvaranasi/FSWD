@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import './App.css';
 import { useState } from 'react';
+import Test from './Test';
 function App(){
 
   let [posts,setPosts] = useState([]);
@@ -17,7 +18,7 @@ function App(){
   return(
     <>
       <h1>UseEffect</h1>
-      <table>
+      {/* <table>
         <thead>
           <tr>
             <th>User ID</th>
@@ -38,7 +39,8 @@ function App(){
             );
           })}
         </tbody>
-      </table>
+      </table> */}
+      <Test/>
     </>
   );
 
