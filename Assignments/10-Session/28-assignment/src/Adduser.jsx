@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Userlist from './Userlist';
 function Adduser() {
 
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, formState: { errors } } = useForm();
   let [users, setUsers] = useState([]);
 
   // From Submission
@@ -19,24 +19,30 @@ function Adduser() {
         {/* Username */}
         <div className="mt-2">
           <label htmlFor="username" className="form-lable">Username</label>
-          <input type="text" {...register('username')} id="username" required className="form-control mt-1" />
+          <input type="text" {...register('username', { required: true, minLength: 4, maxLength: 8 })} id="username" className="form-control mt-1" />
         </div>
+        {errors.username?.type == 'required' && <p className="text-danger">Username is required</p>}
+        {errors.username?.type == 'minLength' && <p className="text-danger">Min Length Should be 4 CHaracters</p>}
+        {errors.username?.type == 'maxLength' && <p className="text-danger">Max Length Should be 8 CHaracters</p>}
         {/* DOB */}
         <div className="mt-3">
           <label htmlFor="dob" className="form-lable">Date Of Birth</label>
-          <input type="date" {...register('dob')} id="dob" required className="form-control mt-1" />
+          <input type="date" {...register('dob', { required: true })} id="dob" className="form-control mt-1" />
         </div>
+        {errors.dob?.type == 'required' && <p className="text-danger">Date of Birth is required</p>}
         {/* City */}
         <div className="mt-3">
           <label htmlFor="city" className="form-lable">City</label>
-          <input type="text" {...register('city')} id="city" required className="form-control mt-1" />
+          <input type="text" {...register('city', { required: true })} id="city" className="form-control mt-1" />
+          {errors.city?.type == 'required' && <p className="text-danger">City is required</p>}
+
         </div>
         {/* Submit */}
         <div>
           <button type="submit" className="btn btn-primary mt-3">Register</button>
         </div>
       </form>
-    <Userlist users={users} />
+      <Userlist users={users} />
     </div>
   )
 }
