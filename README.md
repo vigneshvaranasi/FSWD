@@ -68,7 +68,7 @@ Learn Full Stack Web Development Using HTML, CSS, Bootstrap JavaScript, Node.js,
 28. [Assignment 28](https://assignment-28.netlify.app/)
 29. [Assignment 29](https://assignment-29.netlify.app/)
 30. [Assignment 30](https://assignment-30.netlify.app/)
-31. [Assignment 31](https://assignment-31.netlify.app/)
+31. [Assignment 31](https://31-assignment.netlify.app/)
 # To Do
 - [ ] Add Box Modal
 - [ ] Add Background Images
