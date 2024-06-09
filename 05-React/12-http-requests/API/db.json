@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "id": "395b",
+      "username": "vignesh",
+      "email": "varanasivignesh@gmail.com",
+      "password": "12345678"
+    },
+    {
+      "id": "1485",
+      "username": "eswar",
+      "email": "eswar@gmail.com",
+      "password": "12345678"
+    },
+    {
+      "id": "ea33",
+      "username": "eswar",
+      "email": "eswar@gmail.com",
+      "password": "12345678"
+    },
+    {
+      "id": "86de",
+      "username": "vignesh",
+      "email": "varanasivignesh@gmail.com",
+      "password": "12345y"
+    },
+    {
+      "id": "c1f3",
+      "username": "vvsv",
+      "email": "varanasivignesh@gmail.com",
+      "password": "12345tyhj"
+    }
+  ]
+}

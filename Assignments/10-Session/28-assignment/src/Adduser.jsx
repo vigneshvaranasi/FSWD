@@ -22,8 +22,8 @@ function Adduser() {
           <input type="text" {...register('username', { required: true, minLength: 4, maxLength: 8 })} id="username" className="form-control mt-1" />
         </div>
         {errors.username?.type == 'required' && <p className="text-danger">Username is required</p>}
-        {errors.username?.type == 'minLength' && <p className="text-danger">Min Length Should be 4 CHaracters</p>}
-        {errors.username?.type == 'maxLength' && <p className="text-danger">Max Length Should be 8 CHaracters</p>}
+        {errors.username?.type == 'minLength' && <p className="text-danger">Min Length Should be 4 Characters</p>}
+        {errors.username?.type == 'maxLength' && <p className="text-danger">Max Length Should be 8 Characters</p>}
         {/* DOB */}
         <div className="mt-3">
           <label htmlFor="dob" className="form-lable">Date Of Birth</label>
