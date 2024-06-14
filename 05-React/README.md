@@ -5,3 +5,4 @@
 
 9. [Routing](https://reactjs-routing.netlify.app/)
 10. [Forms & Validation](https://form-validadtion-react.netlify.app/)
+14. [Dynamic Routes](https://dynamic-routes-react.netlify.app/)
