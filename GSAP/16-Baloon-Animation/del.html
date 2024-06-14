@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flying Balloons with GSAP</title>
+    <style>
+        body {
+            margin: 0;
+            background: #f0f0f0;
+            overflow: hidden;
+        }
+        .balloon {
+            position: absolute;
+            bottom: -100px; /* Adjusted to hide balloons initially */
+            width: 100px;
+            height: 100px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            visibility: hidden; /* Hide balloons initially */
+        }
+    </style>
+</head>
+<body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+<script>
+    // Array of balloon image URLs
+    const balloonImages = [
+        'Orange Balloon.svg',
+        'Blue Balloon.svg',
+        'Green Balloon.svg',
+        'Violet Balloon.svg'
+    ];
+
+    // Function to generate a random number between min and max
+    function random(min, max) {
+        return Math.random() * (max - min) + min;
+    }
+
+    // Function to create a balloon element
+    function createBalloon() {
+        const balloon = document.createElement('div');
+        balloon.classList.add('balloon');
+        
+        // Randomly select a balloon image
+        const randomImage = balloonImages[Math.floor(Math.random() * balloonImages.length)];
+        balloon.style.backgroundImage = `url('${randomImage}')`; // Ensure to add single quotes around the URL
+
+        document.body.appendChild(balloon);
+
+        // Random position and delay for each balloon
+        const randomX = random(0, window.innerWidth - 100); // Subtract balloon width (100px)
+        const randomDuration = random(5, 10);
+        const randomDelay = random(0, 5);
+
+        gsap.set(balloon, {x: randomX}); // Set the initial random horizontal position
+
+        // Use gsap.fromTo to animate from bottom to top
+        gsap.fromTo(balloon, 
+            { y: window.innerHeight },  // From bottom of the screen
+            { 
+                y: -window.innerHeight - 100, // Move up out of the screen
+                duration: randomDuration,
+                delay: randomDelay,
+                ease: "none",
+                visibility: "visible", // Make balloon visible when animation starts
+                onComplete: () => {
+                    // Remove balloon from DOM after animation completes
+                    document.body.removeChild(balloon);
+                }
+            });
+    }
+
+    // Generate multiple balloons initially
+    for (let i = 0; i < 10; i++) {
+        createBalloon();
+    }
+
+    // Generate new balloons periodically
+    setInterval(() => {
+        createBalloon();
+    }, 1000);
+</script>
+
+</body>
+</html>

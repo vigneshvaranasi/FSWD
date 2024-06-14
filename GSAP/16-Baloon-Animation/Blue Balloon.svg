@@ -1,0 +1,10 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100">
+  <defs>
+    <g id="balloon">
+      <path d="M30.32,85.27l2.6-3.67,2.18,3.67a3.09,3.09,0,0,1-2.39,1A2.63,2.63,0,0,1,30.32,85.27Z" fill="#0dbee1"></path>
+      <ellipse cx="32.92" cy="41.72" rx="32.92" ry="41.72" fill="#0dbee1"></ellipse>
+      <ellipse cx="50.5" cy="20.4" rx="5.23" ry="13.48" transform="translate(-3 30.59) rotate(-32.78)" style="fill: #fff;opacity: 0.4"></ellipse>
+    </g>
+  </defs>
+  <use xlink:href="#balloon" transform="matrix(1.08084,-0.13631,0.13631,1.08084,10,10)"></use>
+</svg>
