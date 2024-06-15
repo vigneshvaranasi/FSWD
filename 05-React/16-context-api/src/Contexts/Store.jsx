@@ -3,7 +3,7 @@ import { sampleContext } from "./testContext";
 
 function Store({ children }) { // Accept children as props
 
-    const [A, setA] = useState(10);
+    const [A, setA] = useState(5);
 
     return (
         <sampleContext.Provider value={{ A, setA }}>
