@@ -1,0 +1,9 @@
+.header{
+    background-color: var(--medium-brown);    
+    /* background-color: var(--light-blue); */
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+.logo{
+    padding-top: 15px !important;
+}
