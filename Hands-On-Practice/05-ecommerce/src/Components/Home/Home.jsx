@@ -8,32 +8,38 @@ function Home() {
     const { currentUser } = useContext(userLoginContext);
     const [products, setProducts] = useState([]);
 
-    async function fetchData() {
-        try {
-            let response = await fetch('https://fakestoreapi.com/products');
-            let data = await response.json();
-            setProducts(data);
-        } catch (error) {
-            console.error('Error fetching data:', error);
-        }
-    }
-
     useEffect(() => {
+        async function fetchData() {
+            try {
+                // Fetch product data from API
+                const response = await fetch('https://dummyjson.com/products');
+                const data = await response.json();
+
+                // Limit the number of products to display to 16
+                const limitedProducts = data.products.slice(0, 16);
+                setProducts(limitedProducts);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        }
+
         fetchData();
-    }, []); // Empty dependency array ensures useEffect runs only once on component mount
+    }, [])
 
     return (
         <div>
-            <h1>Home</h1>
-            {/* Display welcome message if user is logged in */}
-            {currentUser.username && <h1>Welcome {currentUser.username}</h1>}
-            
+            {/* Display welcome message or store greeting based on user login */}
+            {currentUser.username ?
+                <h1 className='m-4 text-center'>Welcome {currentUser.username}</h1> :
+                <h1 className='m-4 text-center'>Welcome to our store</h1>
+            }
+
             {/* Render products */}
-            {/* <div className="product-list">
+            <div className="product-list row justify-content-center flex-wrap">
                 {products.map((product) => (
                     <Product key={product.id} product={product} />
                 ))}
-            </div> */}
+            </div>
         </div>
     );
 }
