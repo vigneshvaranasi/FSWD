@@ -5,7 +5,7 @@ import { sampleContext } from './Contexts/testContext';
 import { useContext } from 'react';
 
 function Login() {
-    let num = useContext(sampleContext);
+    let {A,setA} = useContext(sampleContext);
 
     const { register, handleSubmit, formState: { errors } } = useForm();
     const navigate = useNavigate();
@@ -29,8 +29,9 @@ function Login() {
     return (
         <div>
             <h1 className="text-center text-info display-3 m-3">Login</h1>
-            <h1>{num.A}</h1>
             {UserCredErr && <p className="text-danger text-center">{UserCredErr}</p>}
+            <h1>{A}</h1>
+            <button onClick={()=>setA(A+1)} className='btn btn-primary'>Change A</button>
             <form className="w-50 mx-auto mt-5" onSubmit={handleSubmit(onUserLogin)}>
                 {/* Username */}
                 <div className="mt-2">
