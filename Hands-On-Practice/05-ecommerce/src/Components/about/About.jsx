@@ -4,8 +4,8 @@ import amzOff from '../../assets/amazonOffice.png';
 
 function About() {
   return (
-    <div className="container m-5">
-      <h1 className="text-center mb-4">About Us</h1>
+    <div className="m-2 m-sm-5">
+      <h1 className="text-center mb-4 mt-4">About Us</h1>
       <div className="row justify-content-center">
         <div className="col-12 col-md-6 text-center">
           <img src={amzOff} alt="Amazon Office" className="img-fluid mb-4" />
