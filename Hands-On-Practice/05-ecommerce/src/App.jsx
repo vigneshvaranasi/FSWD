@@ -6,6 +6,7 @@ import Register from './Components/Register/Register'
 import Login from './Components/Login/Login'
 import About from './Components/about/About'
 import RoutingError from './Components/RoutingError'
+import UserProfile from './Components/user-profile/UserProfile'
 
 function App() {
 
@@ -32,6 +33,10 @@ function App() {
         {
           path: "about",
           element:<About/>
+        },
+        {
+          path:"user-profile",
+          element:<UserProfile/>
         }
       ]
     }

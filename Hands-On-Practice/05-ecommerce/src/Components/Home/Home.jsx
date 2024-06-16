@@ -5,7 +5,7 @@ import { userLoginContext } from '../../Contexts/userLoginContext';
 import { useContext } from 'react';
 
 function Home() {
-    const { currentUser } = useContext(userLoginContext);
+    const { userLoginStatus,currentUser } = useContext(userLoginContext);
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
@@ -28,12 +28,16 @@ function Home() {
 
     return (
         <div>
-            {/* Display welcome message or store greeting based on user login */}
-            {currentUser.username ?
-                <h1 className='m-4 text-center'>Welcome {currentUser.username}</h1> :
-                <h1 className='m-4 text-center'>Welcome to our store</h1>
+            {
+                userLoginStatus && <div className="text-center">
+                    <h3 className="m-4">Welcome {currentUser.username}</h3>
+                </div>
             }
-
+            {
+                !userLoginStatus && <div className="text-center">
+                    <h3 className="m-4">Welcome Guest</h3>
+                </div>
+            }
             {/* Render products */}
             <div className="product-list row justify-content-center flex-wrap">
                 {products.map((product) => (

@@ -1,39 +1,33 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import './Login.css';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { userLoginContext } from '../../Contexts/userLoginContext';
 
+
 function Login() {
   const navigate = useNavigate();
   const { register, handleSubmit, formState: { errors } } = useForm();
-  const { currentUser, handleLogin } = useContext(userLoginContext);
+  const { handleLogin, userLoginStatus } = useContext(userLoginContext);
 
-  const onSubmit = async (formData) => {
-    try {
-      await handleLogin(formData);
-      navigate('/');
-    } catch (error) {
-      console.error('Login error:', error);
+  function onLogin(userDetails){
+    handleLogin(userDetails)
+    console.log('user Details: ', userDetails);
+  }
+
+  useEffect(()=>{
+    if(userLoginStatus==true){
+      navigate('/user-profile')
     }
-  };
+  },[userLoginStatus])
 
-  // Render only if currentUser is not available
-  // if (currentUser.username) {
-  //   return (
-  //     <div className='text-center m-4'>
-  //       <h1>You are already logged in as {currentUser.username}</h1>
-  //       <button className='btn btn-primary' onClick={() => navigate('/')}>Go to Home</button>
-  //     </div>
-  //   );
-  // }
 
   return (
     <div>
       <h1 className='text-center m-4'>Login</h1>
       <div className='row'>
         <div className='col-11 col-md-6 mx-auto'>
-          <form className='mx-auto' onSubmit={handleSubmit(onSubmit)}>
+          <form className='mx-auto' onSubmit={handleSubmit(onLogin)}>
             <div className='mb-3'>
               <label htmlFor="username" className='form-label'>Username</label>
               <input type="text" className='form-control' {...register('username', { required: true })} id='username' placeholder='Enter username' />
