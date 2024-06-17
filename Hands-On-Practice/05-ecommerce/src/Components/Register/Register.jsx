@@ -14,7 +14,7 @@ function Register() {
 
       console.log('userObj: ', userObj);
       // Post Request
-      let res = await fetch('http://localhost:4000/users', {
+      let res = await fetch('https://user-api-6z6q.onrender.com/users', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

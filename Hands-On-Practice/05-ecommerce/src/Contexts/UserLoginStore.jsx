@@ -6,7 +6,7 @@ function UserLoginStore({ children }) {
     const [userLoginStatus, setUserLoginStatus] = useState(false);
     
     async function handleLogin(userObj) {
-        let response = await fetch(`http://localhost:4000/users?username=${userObj.username}&password=${userObj.password}`);
+        let response = await fetch(`https://user-api-6z6q.onrender.com/users?username=${userObj.username}&password=${userObj.password}`);
         let usersData = await response.json();
         console.log('usersData: ', usersData);
 
