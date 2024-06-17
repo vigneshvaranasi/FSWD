@@ -7,6 +7,7 @@ import Login from './Components/Login/Login'
 import About from './Components/about/About'
 import RoutingError from './Components/RoutingError'
 import UserProfile from './Components/user-profile/UserProfile'
+import Cart from './Components/cart/Cart'
 
 function App() {
 
@@ -37,6 +38,10 @@ function App() {
         {
           path:"user-profile",
           element:<UserProfile/>
+        },
+        {
+          path:"cart",
+          element:<Cart/>
         }
       ]
     }

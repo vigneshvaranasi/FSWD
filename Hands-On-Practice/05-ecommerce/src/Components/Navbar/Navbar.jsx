@@ -4,7 +4,7 @@ import { userLoginContext } from '../../Contexts/userLoginContext';
 import { useContext } from 'react';
 import './Navbar.css'
 function Navbar() {
-  const { userLoginStatus, setCurrentUser, setUserLoginStatus } = useContext(userLoginContext);
+  const { userLoginStatus, setCurrentUser, setUserLoginStatus, currentUser } = useContext(userLoginContext);
 
   function logoutUser() {
     //reset state
@@ -24,23 +24,37 @@ function Navbar() {
           {!userLoginStatus && <li className='nav-item'>
             <Link to="register" className='nav-link text-white'>Register</Link>
           </li>}
-          {/* If user is Loged In Then Display Profile*/}
-          {userLoginStatus && <li className='nav-item'>
-            <Link to="user-profile" className='nav-link text-white'>Profile</Link>
-          </li>}
           {/* If user is Loged In Then Display Logout*/}
           {userLoginStatus && <li className='nav-item'>
             <button onClick={logoutUser} className='nav-link text-white'>Logout</button>
           </li>}
           {/* If user is LoggedIn then it will not display otherwise it will display Login */}
-          {!userLoginStatus && <li className='nav-item'>
-            <Link to="login" className='nav-link text-white'>Login</Link>
-          </li>}
-          <li className='nav-item'>
-          </li>
-          <li className='nav-item'>
-            <Link to="about" className='nav-link text-white'>About</Link>
-          </li>
+          {
+            !userLoginStatus && <li className='nav-item'>
+              <Link to="login" className='nav-link text-white'>Login</Link>
+            </li>
+          }
+          {
+            !userLoginStatus && <li className='nav-item'>
+              <Link to="about" className='nav-link text-white'>About</Link>
+            </li>
+          }
+          {/* If user is Loged In Then Display Cart*/}
+          {userLoginStatus && (
+            <li className='nav-item'>
+              <Link to="cart" className='nav-link text-white'>Cart</Link>
+            </li>
+          )}
+          {/* If user is Loged In Then Display Profile*/}
+          {userLoginStatus && (
+            <li className='userProfile nav-item'>
+              <Link to="user-profile" className='rounded-circle'>
+                <img src={currentUser.profile} width={50} height={50} alt="profile" className='ms-3 me-3 profile-img' />
+              </Link>
+              {/* <Link to="user-profile" className='nav-link text-white'>Profile</Link> */}
+            </li>
+          )}
+
         </ul>
       </nav >
     </div>
