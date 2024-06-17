@@ -3,13 +3,17 @@ import amzlogo from '../../assets/amazon.png'
 import { userLoginContext } from '../../Contexts/userLoginContext';
 import { useContext } from 'react';
 import './Navbar.css'
+import { useNavigate } from "react-router-dom";
 function Navbar() {
+  let navigate = useNavigate();
   const { userLoginStatus, setCurrentUser, setUserLoginStatus, currentUser } = useContext(userLoginContext);
 
   function logoutUser() {
     //reset state
     setCurrentUser({});
     setUserLoginStatus(false)
+    //redirect to login page
+    navigate('')
   }
   return (
     <div>
