@@ -1,6 +1,6 @@
-import React, { Children } from 'react'
+import React from 'react'
 import Layout from './Components/Layout'
-import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import { Navigate, RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Home from './Components/Home/Home'
 import Register from './Components/Register/Register'
 import Login from './Components/Login/Login'
@@ -8,6 +8,8 @@ import About from './Components/about/About'
 import RoutingError from './Components/RoutingError'
 import UserProfile from './Components/user-profile/UserProfile'
 import Cart from './Components/cart/Cart'
+import Products from './Components/products/Products'
+
 
 function App() {
 
@@ -17,7 +19,7 @@ function App() {
     {
       path: "",
       element: <Layout />,
-      errorElement: <RoutingError/>,
+      errorElement: <RoutingError />,
       children: [
         {
           path: "",
@@ -30,27 +32,35 @@ function App() {
         {
           path: "login",
           element: <Login />
-        }, 
+        },
         {
           path: "about",
-          element:<About/>
+          element: <About />
         },
         {
-          path:"user-profile",
-          element:<UserProfile/>
-        },
-        {
-          path:"cart",
-          element:<Cart/>
+          path: "user-profile",
+          element: <UserProfile />,
+          children: [
+            {
+              path: "products",
+              element: <Products />
+            },
+            {
+              path: "cart",
+              element: <Cart />
+            },
+            {
+              path: "",
+              element: <Navigate to={'products'} />
+            }
+          ]
         }
       ]
     }
   ])
 
   return (
-    <RouterProvider router={browserRouter}>
-      {Children}
-    </RouterProvider>
+    <RouterProvider router={browserRouter} />
   )
 }
 

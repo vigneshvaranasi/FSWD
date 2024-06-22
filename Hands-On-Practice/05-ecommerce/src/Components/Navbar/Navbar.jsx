@@ -46,7 +46,7 @@ function Navbar() {
           {/* If user is Loged In Then Display Cart*/}
           {userLoginStatus && (
             <li className='nav-item'>
-              <Link to="cart" className='nav-link text-white'>Cart</Link>
+              <Link to="/user-profile/cart" className='nav-link text-white'>Cart</Link>
             </li>
           )}
           {/* If user is Loged In Then Display Profile*/}

@@ -8,18 +8,19 @@ import { userLoginContext } from '../../Contexts/userLoginContext';
 function Login() {
   const navigate = useNavigate();
   const { register, handleSubmit, formState: { errors } } = useForm();
-  const { handleLogin, userLoginStatus } = useContext(userLoginContext);
+  const { handleLogin, userLoginStatus, err } = useContext(userLoginContext);
 
-  function onLogin(userDetails){
+  function onLogin(userDetails) {
     handleLogin(userDetails)
     console.log('user Details: ', userDetails);
   }
 
-  useEffect(()=>{
-    if(userLoginStatus==true){
+  useEffect(() => {
+    if (userLoginStatus == true) {
       navigate('/user-profile')
+      // navigate("/")
     }
-  },[userLoginStatus])
+  }, [userLoginStatus])
 
 
   return (
@@ -27,6 +28,9 @@ function Login() {
       <h1 className='text-center m-4'>Login</h1>
       <div className='row'>
         <div className='col-11 col-md-6 mx-auto'>
+          {
+            err && <div className='alert alert-danger'>{err}</div>
+          }
           <form className='mx-auto' onSubmit={handleSubmit(onLogin)}>
             <div className='mb-3'>
               <label htmlFor="username" className='form-label'>Username</label>
