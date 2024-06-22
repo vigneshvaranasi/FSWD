@@ -2,14 +2,14 @@ import React, { useContext } from 'react';
 import './Product.css';
 import { userLoginContext } from '../../Contexts/userLoginContext';
 
-function Product({ product,showAddToCart  }) {
+function Product({ product, showAddToCart, onProductRemove }) {
     const { currentUser } = useContext(userLoginContext);
     let productObj = product;
 
     async function addToCart(productObj) {
         productObj.username = currentUser.username;
         // let res = await fetch('http://localhost:4000/user-cart', {
-        let res = await fetch('https://user-api-6z6q.onrender.com/user-cart', {
+            let res = await fetch('https://user-api-6z6q.onrender.com/user-cart', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -34,8 +34,18 @@ function Product({ product,showAddToCart  }) {
                     <h5 className="card-title">{product.title}</h5>
                     <p className="card-text">{product.description}</p>
                     <p className="card-price text-secondary fs-4">${product.price}</p>
-                    {showAddToCart && <button className="btn btn-primary" onClick={() => addToCart(productObj)}>Add to Cart</button>}
-                    
+                    {
+                        showAddToCart &&
+                        <div>
+                            <button className="btn btn-primary" onClick={() => addToCart(productObj)}>Add to Cart</button>
+                        </div>
+                    }
+                    {
+                        !showAddToCart &&
+                        <div>
+                            <button className="btn btn-danger" onClick={() => onProductRemove(productObj.id)}>Remove</button>
+                        </div>
+                    }
                 </div>
             </div>
         </div>
