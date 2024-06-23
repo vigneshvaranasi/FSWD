@@ -8,25 +8,33 @@ function Product({ product, showAddToCart, onProductRemove }) {
 
     async function addToCart(productObj) {
         productObj.username = currentUser.username;
-        try {
-            let res = await fetch('https://user-api-6z6q.onrender.com/user-cart', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(productObj)
-            });
-
-            if (res.status === 201) {
-                console.log('Product added to cart');
-            } else {
-                const errorData = await res.json();
-                console.error('Failed to add product to cart:', res.status, errorData);
+        let retries = 3;
+        while (retries > 0) {
+            try {
+                let res = await fetch('https://user-api-6z6q.onrender.com/user-cart', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(productObj)
+                });
+    
+                if (res.ok) {
+                    console.log('Product added to cart');
+                    return;
+                } else {
+                    const errorText = await res.text();
+                    console.error('Failed to add product to cart:', res.status, errorText);
+                }
+            } catch (error) {
+                console.error('Error adding product to cart:', error);
             }
-        } catch (error) {
-            console.error('Error adding product to cart:', error);
+            retries--;
+            await new Promise(resolve => setTimeout(resolve, 1000));
         }
+        console.error('Failed to add product after retries');
     }
+    
 
     return (
         <div className='col-12 col-sm-6 col-md-4 d-flex col-lg-3 mb-3'>
