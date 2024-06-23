@@ -17,8 +17,8 @@ function Login() {
 
   useEffect(() => {
     if (userLoginStatus == true) {
-      navigate('/user-profile')
-      // navigate("/")
+      // navigate('/user-profile')
+      navigate("/")
     }
   }, [userLoginStatus])
 

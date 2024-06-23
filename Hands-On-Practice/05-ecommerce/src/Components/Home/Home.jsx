@@ -29,13 +29,17 @@ function Home() {
     return (
         <div>
             {
-                userLoginStatus && <div className="text-center">
+                userLoginStatus && 
+                <div className="text-center">
                     <h3 className="m-4">Welcome {currentUser.username}</h3>
                 </div>
             }
             {
-                !userLoginStatus && <div className="text-center">
-                    <h3 className="m-4">Welcome Guest</h3>
+                !userLoginStatus && 
+                <div className="text-center">
+                    <h3 className="m-4 mb-1">Welcome Guest</h3>
+                    <h4 className="m-4 ms-0 me-0">Login to Purchase Items</h4>
+                    {/* <h4 className="m-4 ms-0 me-0 alert alert-danger w-auto">Login to Buy Items</h4> */}
                 </div>
             }
             {/* Render products */}

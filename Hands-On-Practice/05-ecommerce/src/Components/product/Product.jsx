@@ -3,24 +3,28 @@ import './Product.css';
 import { userLoginContext } from '../../Contexts/userLoginContext';
 
 function Product({ product, showAddToCart, onProductRemove }) {
-    const { currentUser } = useContext(userLoginContext);
+    const { currentUser, userLoginStatus } = useContext(userLoginContext);
     let productObj = product;
 
     async function addToCart(productObj) {
         productObj.username = currentUser.username;
-        // let res = await fetch('http://localhost:4000/user-cart', {
+        try {
             let res = await fetch('https://user-api-6z6q.onrender.com/user-cart', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(productObj)
-        });
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(productObj)
+            });
 
-        if (res.status === 201) {
-            console.log('Product added to cart');
-        } else {
-            console.error('Failed to add product to cart');
+            if (res.status === 201) {
+                console.log('Product added to cart');
+            } else {
+                const errorData = await res.json();
+                console.error('Failed to add product to cart:', res.status, errorData);
+            }
+        } catch (error) {
+            console.error('Error adding product to cart:', error);
         }
     }
 
@@ -35,7 +39,7 @@ function Product({ product, showAddToCart, onProductRemove }) {
                     <p className="card-text">{product.description}</p>
                     <p className="card-price text-secondary fs-4">${product.price}</p>
                     {
-                        showAddToCart &&
+                        showAddToCart && userLoginStatus &&
                         <div>
                             <button className="btn btn-primary" onClick={() => addToCart(productObj)}>Add to Cart</button>
                         </div>
