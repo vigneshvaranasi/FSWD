@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": "ac81",
+      "username": "vvsv",
+      "email": "varanasivignesh@gmail.com",
+      "password": "12345678",
+      "mobile": "1234567890",
+      "profile": "https://m.media-amazon.com/images/I/71nG3R1OPeL._SY879_.jpg"
+    },
+    {
+      "id": "1324",
+      "username": "vvsvignesh",
+      "email": "varanasivsv@gmail.com",
+      "password": "12345678",
+      "mobile": "999999999999",
+      "profile": "sdn"
+    },
+    {
+      "id": "dabb",
+      "username": "test",
+      "email": "test@gmail.com",
+      "password": "12345678",
+      "mobile": "1234567890",
+      "profile": "abc"
+    }
+  ]
+}
