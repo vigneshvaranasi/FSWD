@@ -1,0 +1,30 @@
+get http://localhost:3500/products
+
+###
+get http://localhost:3500/products/2
+
+###
+post http://localhost:3500/products
+Content-Type: application/json
+
+{
+    "id": 5,
+    "name": "Product 5"
+}
+
+###
+put http://localhost:3500/products
+Content-Type: application/json
+
+{
+    "id": 2,
+    "name": "Product 2 Updated"
+}
+
+###
+delete http://localhost:3500/products
+Content-Type: application/json
+
+{
+    "id": 2
+}
