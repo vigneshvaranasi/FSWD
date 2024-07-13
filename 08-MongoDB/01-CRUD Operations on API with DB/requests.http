@@ -1,0 +1,106 @@
+
+### Root
+get http://localhost:4000/
+
+
+### Users API Requests
+
+get http://localhost:4000/user-api/users
+
+###
+get http://localhost:4000/user-api/users/vignesh
+
+
+###
+post http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+    "name": "Vignesh",
+    "username": "vignesh",
+    "password": "12345678",
+    "email": "vignesh@gmail.com"
+}
+###
+post http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+    "name": "vvsv",
+    "username": "vvsv",
+    "password": "12345678",
+    "email": "vvsv@gmail.com"
+}
+
+###
+post http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+    "name": "Dev Duo",
+    "username": "devduo",
+    "password": "12345678",
+    "email": "devduo@gmail.com"
+}
+###
+post http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+    "name": "Dev Duo",
+    "username": "devduo",
+    "password": "12345678",
+    "email": "devduo@gmail.com"
+}
+
+
+###
+post http://localhost:4000/user-api/login
+Content-Type: application/json
+
+{
+    "username": "vignesh",
+    "password": "12345678"
+}
+
+###
+put http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+    "id": 1,
+    "name": "Vignesh Varanasi"
+}
+###
+delete http://localhost:4000/user-api/users/vignesh
+
+### Products API Requests
+
+###
+get http://localhost:4000/products-api/
+
+###
+get http://localhost:4000/products-api/2
+
+###
+post http://localhost:4000/products-api/
+Content-Type: application/json
+
+{
+    "id": 5,
+    "name": "Product 5",
+    "price": 100
+}
+
+###
+put http://localhost:4000/products-api/2
+Content-Type: application/json
+
+{
+    "id": 2,
+    "name": "Product 2 Updated",
+    "price": 200
+}
+
+###
+delete http://localhost:4000/products-api/2

@@ -1,0 +1,71 @@
+### Users API Requests
+
+### -> Get All Users
+get http://localhost:4000/user-api/users
+
+### -> Get User By Username
+get http://localhost:4000/user-api/users/vignesh
+
+
+### -> Create New User
+post http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+    "name": "Vignesh",
+    "username": "vignesh",
+    "password": "12345678",
+    "email": "vignesh@gmail.com"
+}
+###
+post http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+    "name": "vvsv",
+    "username": "vvsv",
+    "password": "12345678",
+    "email": "vvsv@gmail.com"
+}
+
+###
+post http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+    "name": "Dev Duo",
+    "username": "devduo",
+    "password": "12345678",
+    "email": "devduo@gmail.com"
+}
+###
+post http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+    "name": "Pavan",
+    "username": "pavan",
+    "password": "12345678",
+    "email": "pavan@gmail.com"
+}
+
+
+###  -> Login
+post http://localhost:4000/user-api/users/login
+Content-Type: application/json
+
+{
+    "username": "vignesh",
+    "password": "12345678"
+}
+
+###
+put http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+    "id": 1,
+    "name": "Vignesh Varanasi"
+}
+###
+delete http://localhost:4000/user-api/users/vignesh
