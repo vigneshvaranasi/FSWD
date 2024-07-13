@@ -51,6 +51,16 @@ const productsAPI = require('./APIs/productsAPI');
 app.use('/products-api', productsAPI);
 
 
+// Handling Invalid Paths
+app.use('*',(req,res,next) => {
+    res.send({message: `Path ${req.baseUrl} is invalid`});
+});
+
+// Error Handling Middleware
+app.use((err,req,res,next) => {
+    res.send({message: 'Error Occurred', error: err.message});
+});
+
 
 
 
