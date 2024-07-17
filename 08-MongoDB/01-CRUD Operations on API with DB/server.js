@@ -8,6 +8,7 @@ const app = exp();
 const {MongoClient} = require('mongodb');
 
 // Database URL
+// const dbURL = 'mongodb+srv://myAtlasDBUser:TCMpdwMfoi62hj22@myatlasclusteredu.gf87o4p.mongodb.net/?retryWrites=true&w=majority&appName=myAtlasClusterEDU';
 const dbURL = 'mongodb://127.0.0.1:27017';
 
 // Create MongoDB Client
