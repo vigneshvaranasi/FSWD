@@ -2,6 +2,7 @@ const Bottleneck = require('bottleneck'); // Use require for CommonJS
 const fetch = (...args) =>
   import('node-fetch').then(({ default: fetch }) => fetch(...args));
 const express = require('express');
+const { MongoClient, ServerApiVersion } = require('mongodb');
 
 const app = express();
 const port = 3000;
@@ -12,7 +13,6 @@ const limiter = new Bottleneck({
     maxConcurrent: 4 // Maximum number of concurrent requests
 });
 
-// List of usernames to fetch
 let usernames = [
     { username: 'Paidimukkula_Lavanya' },
     { username: 'siddhuparsa99' },
@@ -30,7 +30,6 @@ let usernames = [
     { username: 'suryaharshasambhana5' },
     { username: 'yaswanthsaisanapala' },
     { username: 'shaikfakruddin2145' },
-    { username: '22501a05g2' },
     { username: '22501a05g7' },
     { username: 's.udaybhaskar2005' },
     { username: 'syamprasadreddysomula' },
@@ -45,6 +44,18 @@ let usernames = [
     { username: 'veerankisirisha' },
     { username: 'eswar1357' }
 ];
+
+// MongoDB connection URI
+const uri = "mongodb+srv://pavankc005:pavankc@cluster1.qt05vl9.mongodb.net/?retryWrites=true&w=majority&appName=Cluster1";
+
+// Create a MongoClient with a MongoClientOptions object to set the Stable API version
+const client = new MongoClient(uri, {
+    serverApi: {
+        version: ServerApiVersion.v1,
+        strict: true,
+        deprecationErrors: true,
+    }
+});
 
 // Function to fetch user data
 async function fetchSam(username) {
@@ -63,7 +74,6 @@ async function fetchSam(username) {
             let res = await response.json();
             let allContests = res.result;
             let attendedContests = allContests.reverse();
-            console.log(`Data fetched for ${username}:`, attendedContests); // Log fetched data
             return { username, attendedContests };
         } else {
             throw new Error('Received non-JSON response');
@@ -78,17 +88,39 @@ function delay(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+// Connect to MongoDB and start the server
+async function startServer() {
+    try {
+        // Connect the client to the server
+        await client.connect();
+        await client.db("admin").command({ ping: 1 });
+        console.log("Pinged your deployment. You successfully connected to MongoDB!");
+
+        // Start the Express server
+        app.listen(port, () => {
+            console.log(`Server is running at http://localhost:${port}`);
+        });
+    } catch (err) {
+        console.error('Error connecting to MongoDB:', err);
+    }
+}
+
 // Route to fetch all users data
 app.get('/fetch-users', async (req, res) => {
     try {
         let promises = usernames.map(user => limiter.schedule(() => fetchSam(user.username)));
-        let results = await Promise.all(promises);
-        res.json(results);
+        let info = await Promise.all(promises);
+
+        // Insert results into MongoDB
+        const db = client.db('students');
+        const collection = db.collection('contestinfo');
+        await collection.insertMany(info);
+        res.json(info);
+
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
 });
 
-app.listen(port, () => {
-    console.log(`Server is running at http://localhost:${port}`);
-});
+// Start the server
+startServer();

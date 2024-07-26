@@ -40,28 +40,32 @@ let findOneData = {
   name: 'Dev Duo'
 };
 
-let updateOneData = {
-  name: 'Dev Duo',
-  $set: {
-    age: 25
-  }
-};
-
 async function main() {
   try {
     // Connect to MongoDB
     await mc.connect();
-    
+
     // Connect to Database
     const usersDatabase = mc.db('CRUD');
-    
+
     // Connect to Collection
     const usersCollection = usersDatabase.collection('Users');
-    
+
     // Share the Collection with the APIs
     app.set('usersCollection', usersCollection);
-    
+
     console.log(`Connected to MongoDB Database: ${usersDatabase.databaseName} and Collection: ${usersCollection.collectionName} 🌍`);
+
+    // Assign Port Number to Server
+    const port = 4000;
+    app.listen(port, () => {
+      console.log(`Server running on port http://localhost:${port}`);
+    });
+
+    // Delete all Documents
+    const deleteAllResult = await usersCollection.deleteMany({});
+    console.log('\nDeleted All Documents Successfully');
+    console.log(deleteAllResult);
 
     // Insert One Document
     const insertOneResult = await usersCollection.insertOne(insertOneData);
@@ -80,11 +84,20 @@ async function main() {
     console.log('\nFound One Document Successfully');
     console.log(findOneResult);
 
-    // Assign Port Number to Server
-    const port = 4000;
-    app.listen(port, () => {
-      console.log(`Server running on port http://localhost:${port}`);
-    });
+    // Update One Document
+    const updateOneResult = await usersCollection.updateOne(
+      { name: 'Dev Duo' },
+      { $set: { age: 25 } }
+    );
+    console.log('\nUpdated One Document Successfully');
+    console.log(updateOneResult);
+
+    // Delete One Document
+    const deleteOneResult = await usersCollection.deleteOne({ name: 'Dev Duo' });
+    console.log('\nDeleted One Document Successfully');
+    console.log(deleteOneResult);
+
+
   } catch (err) {
     console.error('Error in connecting to MongoDB or performing operations', err);
   }
