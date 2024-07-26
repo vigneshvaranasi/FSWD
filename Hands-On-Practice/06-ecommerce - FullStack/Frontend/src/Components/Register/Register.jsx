@@ -15,16 +15,19 @@ function Register() {
       console.log('userObj: ', userObj);
       // Post Request
       let res = await fetch('http://localhost:4000/user-api/users', {
-      // let res = await fetch('https://user-api-6z6q.onrender.com/users', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(userObj)
       })
-      console.log('res: ', res);
-      if(res.status === 200){
+      let dataRes = await res.json();
+      console.log('dataRes: ', dataRes);
+      if(dataRes.message === "User Created"){
         navigate('/login')
+      }
+      else if(dataRes.message === "User Already Exists"){
+        setError('User Already Exists')
       }
     }catch(err){
       setError('Something went wrong try again later!')
