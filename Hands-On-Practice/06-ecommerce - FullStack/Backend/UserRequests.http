@@ -1,0 +1,91 @@
+### Users API Requests
+
+### -> Get All Users
+get http://localhost:4000/user-api/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InZpZ25lc2giLCJpYXQiOjE3MjE5NzAyODgsImV4cCI6MTcyMTk3Mzg4OH0.f0qbPB7yp5My_BbaNtK069NurP09gxzVGvMH58rkAq4
+
+###
+get http://localhost:4000/user-api/users/vignesh
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InZpZ25lc2giLCJpYXQiOjE3MjA4NzEzNzMsImV4cCI6MTcyMDg3NDk3M30.uq6XRDfs6fsnrGBVVay7u_23vXSBMx50PFNnvXQTgbo
+
+
+### -> Create New User
+post http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+    "name": "Vignesh",
+    "username": "vignesh",
+    "password": "12345678",
+    "email": "vignesh@gmail.com"
+}
+###
+post http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+    "name": "vvsv",
+    "username": "vvsv",
+    "password": "12345678",
+    "email": "vvsv@gmail.com"
+}
+
+###
+post http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+    "name": "Dev Duo",
+    "username": "devduo",
+    "password": "12345678",
+    "email": "devduo@gmail.com"
+}
+###
+post http://localhost:4000/user-api/users
+Content-Type: application/json
+
+{
+    "name": "Pavan",
+    "username": "pavan",
+    "password": "12345678",
+    "email": "pavan@gmail.com"
+}
+
+
+###  -> Login
+post http://localhost:4000/user-api/users/login
+Content-Type: application/json
+
+{
+    "username": "vignesh",
+    "password": "12345678"
+}
+
+###
+put http://localhost:4000/user-api/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InZpZ25lc2giLCJpYXQiOjE3MjE5NzAyODgsImV4cCI6MTcyMTk3Mzg4OH0.f0qbPB7yp5My_BbaNtK069NurP09gxzVGvMH58rkAq4
+Content-Type: application/json
+
+{
+    "username": "vignesh",
+    "name": "Vignesh Varanasi",
+    "email": "vigneshvaranasi@gmail.com"
+}
+###
+delete http://localhost:4000/user-api/users/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InZpZ25lc2giLCJpYXQiOjE3MjA4NzEzNzMsImV4cCI6MTcyMDg3NDk3M30.uq6XRDfs6fsnrGBVVay7u_23vXSBMx50PFNnvXQTgbo
+Content-Type: application/json
+
+{
+    "username": "vignesh"
+}
+
+### -> Add Product to Cart
+put http://localhost:4000/user-api/add-to-cart/pavan
+Content-Type: application/json
+
+{
+    "product":    {
+        "id": 3
+    }
+}

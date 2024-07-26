@@ -1,0 +1,8 @@
+### Products API Requests
+
+### -> Get All Products
+get http://localhost:4000/products-api/
+
+### -> Get Products by ID
+get http://localhost:4000/products-api/2
+
