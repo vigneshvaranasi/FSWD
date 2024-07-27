@@ -9,9 +9,9 @@ function Products() {
       // Fetch product data from API
       const response = await fetch('http://localhost:4000/products-api/');
       const data = await response.json();
-      console.log('data: ', data);
+      // console.log('data: ', data);
       setProducts(data.payload);
-      console.log('data.payload: ', data.payload);
+      // console.log('data.payload: ', data.payload);
     } catch (error) {
       console.error('Error fetching data:', error);
     }

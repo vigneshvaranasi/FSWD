@@ -182,7 +182,39 @@ userApp.put('/add-to-cart/:username', expressAsyncHandler(async (req, res) => {
 
 }));
 
+// Delete selected product from the specific user cart , Remove one product from the cart
+userApp.put('/delete-from-cart/:username', expressAsyncHandler(async (req, res) => {
 
+    // Get Collection objects
+    const cartCollection = req.app.get('cartCollection');
+    const usersCollection = req.app.get('usersCollection');
+
+    // get username form URL
+    let usernameFromURL = req.params.username;
+
+    // Get product from client
+    let productBody = req.body;
+
+    const productID = Number(productBody.product);
+
+    // Delete one product from cart
+    let result = await cartCollection.updateOne(
+        { username: { $eq: usernameFromURL } },
+        { $pull: { products: { id: productID } } },
+        { multi: false }
+    );
+
+    // Delete one product from cart in user collection
+    let result1 = await usersCollection.updateOne(
+        { username: { $eq: usernameFromURL } },
+        { $pull: { cart: { id: productID } } },
+        { multi: false }
+    );
+
+    // Send response to the client
+    res.send({ message: "Product Deleted from Cart", payload: result1 });
+
+}));
 
 // Export userApp
 module.exports = userApp;

@@ -34,22 +34,25 @@ function Cart() {
     }
   }
 
+
   // Remove from cart
   async function removeFromCart(productId) {
-    console.log('Attempting to remove product with ID:', productId);
     try {
-      // const response = await fetch(`http://localhost:4000/user-cart/${productId}`, {
-      const response = await fetch(`https://user-api-6z6q.onrender.com/user-cart/${productId}`, {
-        method: 'DELETE',
+      // Remove product from cart
+      const response = await fetch(`http://localhost:4000/user-api/delete-from-cart/${currentUser.username}`, {
+        method: 'put',
+        headers: {
+          'Content-Type': 'application/json',
+          // 'Authorization': `Bearer ${sessionStorage.getItem('token')}`
+        },
+        body: JSON.stringify({ product: productId })
       });
-      if (response.status === 200) {
-        console.log('Product removed from cart');
-        getCartProductsofUserCart();
-      } else {
-        console.error('Failed to remove product from cart. Status:', response.status);
-      }
-    } catch (error) {
-      console.error('Error removing product from cart:', error);
+      const res = await response.json();
+      console.log('Product removed:', res);
+      getCartProductsofUserCart();
+    }
+    catch (error) {
+      console.error('Error removing product:', error);
     }
   }
   
