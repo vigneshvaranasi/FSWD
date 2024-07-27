@@ -18,7 +18,7 @@ function UserProfile() {
     navigate('../edit-user');
   }
 
-  console.log('currentUser: ', currentUser);
+  // console.log('currentUser: ', currentUser);
   return (
     <div className='text-center mt-4'>
       <img src={currentUser.profile} width={150} height={150} className='rounded-circle object-fit-cover' alt="" />

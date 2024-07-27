@@ -161,9 +161,9 @@ userApp.put('/add-to-cart/:username', expressAsyncHandler(async (req, res) => {
 
     // Get Collection objects
     const cartCollection = req.app.get('cartCollection');
-    const usersCollection = req.app.get('usersCollection'); 
+    const usersCollection = req.app.get('usersCollection');
     const proCollection = req.app.get('productsCollection');
-    
+
 
     // get username form URL
     let usernameFromURL = req.params.username;
@@ -187,39 +187,49 @@ userApp.put('/add-to-cart/:username', expressAsyncHandler(async (req, res) => {
 
 }));
 
-// Delete selected product from the specific user cart , Remove one product from the cart
-userApp.put('/delete-from-cart/:username', tokenVerify,expressAsyncHandler(async (req, res) => {
+// Delete selected product from the specific user cart, Remove one product from the cart
+const { ObjectId } = require('mongodb');
+
+// Delete selected product from the specific user cart, Remove one product from the cart
+// Delete selected product from the specific user cart, Remove one product from the cart
+userApp.put('/delete-from-cart/:username', expressAsyncHandler(async (req, res) => {
 
     // Get Collection objects
     const cartCollection = req.app.get('cartCollection');
     const usersCollection = req.app.get('usersCollection');
 
-    // get username form URL
+    // Get username from URL
     let usernameFromURL = req.params.username;
 
     // Get product from client
     let productBody = req.body;
 
-    const productID = Number(productBody.product);
+    // Get product id
+    let productID = productBody.product.id;
 
-    // Delete one product from cart
+    // Delete the product from the cart
     let result = await cartCollection.updateOne(
         { username: { $eq: usernameFromURL } },
-        { $pull: { products: { id: productID } } },
-        { multi: false }
+        { $pull: { products: { id: productID } } }
     );
 
-    // Delete one product from cart in user collection
+    // Delete the product from the cart in user collection
     let result1 = await usersCollection.updateOne(
         { username: { $eq: usernameFromURL } },
-        { $pull: { cart: { id: productID } } },
-        { multi: false }
+        { $pull: { cart: { id: productID } } }
     );
 
     // Send response to the client
-    res.send({ message: "Product Deleted from Cart", payload: result1 });
-
+    if (result.modifiedCount === 0 || result1.modifiedCount === 0) {
+        res.status(404).send({ message: 'Product not found in cart' });
+    } else {
+        res.send({ message: 'Product Deleted from Cart', payload: result });
+    }
 }));
+
+
+
+
 
 // Export userApp
 module.exports = userApp;

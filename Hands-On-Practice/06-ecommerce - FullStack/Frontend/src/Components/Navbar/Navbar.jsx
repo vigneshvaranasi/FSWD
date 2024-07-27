@@ -2,9 +2,17 @@ import { Link } from "react-router-dom";
 import amzlogo from '../../assets/amazon.png'
 import { userLoginContext } from '../../Contexts/userLoginContext';
 import { useContext } from 'react';
+import { useNavigate } from "react-router-dom";
 import './Navbar.css'
 function Navbar() {
+
+  const navigate = useNavigate();
   const { userLoginStatus, setCurrentUser, setUserLoginStatus, currentUser, logoutUser } = useContext(userLoginContext);
+
+  function logoutFromNav() {
+    logoutUser();
+    navigate('/');
+  }
 
   return (
     <div>
@@ -21,7 +29,7 @@ function Navbar() {
           </li>}
           {/* If user is Loged In Then Display Logout*/}
           {userLoginStatus && <li className='nav-item'>
-            <button onClick={logoutUser} className='nav-link text-white'>Logout</button>
+            <button onClick={logoutFromNav} className='nav-link text-white'>Logout</button>
           </li>}
           {/* If user is LoggedIn then it will not display otherwise it will display Login */}
           {
@@ -40,11 +48,11 @@ function Navbar() {
               <Link to="/user-profile/cart" className='nav-link text-white'>
                 Cart
               {/*Display Cart Count */}
-              {/* {
+              {
                 currentUser.cart ? '' : (
                   <span className='badge bg-secondary ms-1 rounded-5'>{currentUser.cart.length}</span>
                 )
-              } */}
+              }
               </Link>
             </li>
 
