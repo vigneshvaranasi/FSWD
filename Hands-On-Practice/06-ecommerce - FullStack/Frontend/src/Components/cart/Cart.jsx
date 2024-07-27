@@ -11,10 +11,24 @@ function Cart() {
     try {
       // Fetch product data from API
       // const response = await fetch(`http://localhost:4000/user-cart?username=${currentUser.username}`);
-      const response = await fetch(`https://user-api-6z6q.onrender.com/user-cart?username=${currentUser.username}`);
+      // const response = await fetch(`https://user-api-6z6q.onrender.com/user-cart?username=${currentUser.username}`);
+      const response = await fetch(`http://localhost:4000/user-api/users/${currentUser.username}`,{
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/JSON',
+          'Authorization': `Bearer ${sessionStorage.getItem('token')}`
+        }
+      })
       const cartList = await response.json();
-      console.log('Fetched cart data: ', cartList);
-      setCartItems(cartList);
+
+      // if cart is not aviailable
+      if (!cartList.payload.cart) {
+        console.log('Cart is empty');
+        setCartItems([]);
+        return;
+      }
+      console.log('Fetched cart data: ', cartList.payload.cart);
+      setCartItems(cartList.payload.cart);
     } catch (error) {
       console.error('Error fetching data:', error);
     }
@@ -47,14 +61,14 @@ function Cart() {
 
   return (
     <div>
-      {cartItems.length === 0 ? (
+      {(cartItems.length === 0 ||!cartItems) ? (
         <h1 className='m-4 text-center'>Cart is empty</h1>
       ) : (
         <>
           <h1 className='m-4 text-center'>Cart</h1>
           <div className="product-list row justify-content-center flex-wrap">
-            {cartItems.map((product) => (
-              <Product key={product.id} product={product} showAddToCart={false} onProductRemove={removeFromCart} />
+            {cartItems.map((product,index) => (
+              <Product key={index} product={product} showAddToCart={false} onProductRemove={removeFromCart} />
             ))}
           </div>
         </>

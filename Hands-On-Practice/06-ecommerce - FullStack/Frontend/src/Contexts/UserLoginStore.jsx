@@ -18,20 +18,23 @@ function UserLoginStore({ children }) {
             });
 
             let data = await response.json();
-            console.log(data);
+            // console.log(data.user);
 
-            if(data.message==="Login Success"){
+            if (data.message === "Login Success") {
                 // Update State
                 setCurrentUser(data.user);
                 setUserLoginStatus(true);
                 setErr("");
+
+                // Save token in Session Storage
+                sessionStorage.setItem('token', data.token);
             }
-            else if(data.message==="Invalid Username"){
+            else if (data.message === "Invalid Username") {
                 setErr("Invalid Username")
             }
-            else if(data.message==="Invalid Password"){
+            else if (data.message === "Invalid Password") {
                 setErr("Invalid Password")
-            }else{
+            } else {
                 setErr("Something went wrong")
             }
 
@@ -48,6 +51,9 @@ function UserLoginStore({ children }) {
         setCurrentUser({});
         setUserLoginStatus(false)
         setErr("");
+
+        // Remove token from Session Storage
+        sessionStorage.removeItem('token');
     }
 
     return (

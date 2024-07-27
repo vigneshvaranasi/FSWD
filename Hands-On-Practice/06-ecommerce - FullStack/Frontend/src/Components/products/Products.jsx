@@ -7,11 +7,11 @@ function Products() {
   async function fetchData() {
     try {
       // Fetch product data from API
-      // const response = await fetch('http://localhost:4000/products');
-      const response = await fetch('https://user-api-6z6q.onrender.com/products');
+      const response = await fetch('http://localhost:4000/products-api/');
       const data = await response.json();
-      // console.log('data: ', data);
-      setProducts(data);
+      console.log('data: ', data);
+      setProducts(data.payload);
+      console.log('data.payload: ', data.payload);
     } catch (error) {
       console.error('Error fetching data:', error);
     }
