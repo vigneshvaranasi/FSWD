@@ -81,7 +81,7 @@ Content-Type: application/json
 }
 
 ### -> Add Product to Cart
-put http://localhost:4000/user-api/add-to-cart/pavan
+put http://localhost:4000/user-api/add-to-cart/vignesh
 Content-Type: application/json
 
 {
