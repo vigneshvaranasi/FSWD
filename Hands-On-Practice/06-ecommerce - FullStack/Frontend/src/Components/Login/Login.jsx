@@ -12,7 +12,7 @@ function Login() {
 
   function onLogin(userDetails) {
     handleLogin(userDetails)
-    console.log('user Details: ', userDetails);
+    // console.log('user Details: ', userDetails);
   }
 
   useEffect(() => {

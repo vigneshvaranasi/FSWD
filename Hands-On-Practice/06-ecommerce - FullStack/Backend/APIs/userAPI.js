@@ -80,7 +80,7 @@ userApp.post('/users', expressAsyncHandler(async (req, res) => {
     }
 }));
 
-//  PUT Request to update user by username (Protected Route)
+// PUT Request to update user by username (Protected Route)
 userApp.put('/users', tokenVerify, expressAsyncHandler(async (req, res) => {
 
     // Get usersCollection object
@@ -88,13 +88,18 @@ userApp.put('/users', tokenVerify, expressAsyncHandler(async (req, res) => {
 
     // Get data from client
     let updatedUser = req.body;
+    const { oldUsername, ...updateData } = updatedUser;
+    console.log('updatedUser: ', updateData);
 
     // Update the user
-    let result = await usersCollection.updateOne({ username: { $eq: updatedUser.username } }, { $set: updatedUser });
+    let result = await usersCollection.updateOne({ username: oldUsername }, { $set: updateData });
+
+    let user = await usersCollection.findOne({ username: updateData.username });
 
     // Send response to the client
-    res.send({ message: "User Updated", payload: result });
+    res.send({ message: "User Updated", payload: result, updatedUser: user });
 }));
+
 
 // DELETE Request to delete user by id (Protected Route)
 userApp.delete('/users', tokenVerify, expressAsyncHandler(async (req, res) => {
@@ -183,7 +188,7 @@ userApp.put('/add-to-cart/:username', expressAsyncHandler(async (req, res) => {
 }));
 
 // Delete selected product from the specific user cart , Remove one product from the cart
-userApp.put('/delete-from-cart/:username', expressAsyncHandler(async (req, res) => {
+userApp.put('/delete-from-cart/:username', tokenVerify,expressAsyncHandler(async (req, res) => {
 
     // Get Collection objects
     const cartCollection = req.app.get('cartCollection');

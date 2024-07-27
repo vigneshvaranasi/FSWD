@@ -4,7 +4,7 @@ import { userLoginContext } from '../../Contexts/userLoginContext';
 import { useContext } from 'react';
 import './Navbar.css'
 function Navbar() {
-  const { userLoginStatus, setCurrentUser, setUserLoginStatus, currentUser,logoutUser } = useContext(userLoginContext);
+  const { userLoginStatus, setCurrentUser, setUserLoginStatus, currentUser, logoutUser } = useContext(userLoginContext);
 
   return (
     <div>
@@ -36,9 +36,18 @@ function Navbar() {
           }
           {/* If user is Loged In Then Display Cart*/}
           {userLoginStatus && (
-            <li className='nav-item'>
-              <Link to="/user-profile/cart" className='nav-link text-white'>Cart</Link>
+            <li className='nav-item d-relative'>
+              <Link to="/user-profile/cart" className='nav-link text-white'>
+                Cart
+              {/*Display Cart Count */}
+              {/* {
+                currentUser.cart ? '' : (
+                  <span className='badge bg-secondary ms-1 rounded-5'>{currentUser.cart.length}</span>
+                )
+              } */}
+              </Link>
             </li>
+
           )}
           {/* If user is Loged In Then Display Profile*/}
           {userLoginStatus && (

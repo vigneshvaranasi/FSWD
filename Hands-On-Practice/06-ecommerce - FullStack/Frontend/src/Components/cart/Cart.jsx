@@ -43,7 +43,7 @@ function Cart() {
         method: 'put',
         headers: {
           'Content-Type': 'application/json',
-          // 'Authorization': `Bearer ${sessionStorage.getItem('token')}`
+          'Authorization': `Bearer ${sessionStorage.getItem('token')}`
         },
         body: JSON.stringify({ product: productId })
       });
