@@ -4,6 +4,7 @@ import { userLoginContext } from '../../Contexts/userLoginContext';
 import { useContext } from 'react';
 import { useNavigate } from "react-router-dom";
 import './Navbar.css'
+import { toast } from 'react-toastify';
 function Navbar() {
 
   const navigate = useNavigate();
@@ -12,6 +13,15 @@ function Navbar() {
   function logoutFromNav() {
     logoutUser();
     navigate('/');
+    toast.success('Logout Success', {
+      position: "top-center",
+      autoClose: 1500,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+    });
   }
 
   return (
@@ -47,15 +57,12 @@ function Navbar() {
             <li className='nav-item d-relative'>
               <Link to="/user-profile/cart" className='nav-link text-white'>
                 Cart
-              {/*Display Cart Count */}
-              {
-                currentUser.cart ? '' : (
+                {/* Display Cart Count */}
+                {currentUser.cart && currentUser.cart.length > 0 && (
                   <span className='badge bg-secondary ms-1 rounded-5'>{currentUser.cart.length}</span>
-                )
-              }
+                )}
               </Link>
             </li>
-
           )}
           {/* If user is Loged In Then Display Profile*/}
           {userLoginStatus && (

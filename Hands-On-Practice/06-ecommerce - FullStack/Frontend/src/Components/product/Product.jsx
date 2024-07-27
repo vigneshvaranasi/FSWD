@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import './Product.css';
 import { userLoginContext } from '../../Contexts/userLoginContext';
+import { toast } from 'react-toastify';
 
 function Product({ product, showAddToCart, onProductRemove }) {
     const { currentUser, userLoginStatus } = useContext(userLoginContext);
@@ -21,6 +22,16 @@ function Product({ product, showAddToCart, onProductRemove }) {
         } catch (error) {
             console.error('Error adding product to cart:', error);
         }
+
+        toast.success('Product added to cart', {
+            position: "top-center",
+            autoClose: 1000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: true,
+            progress: undefined,
+        });
     }
 
 

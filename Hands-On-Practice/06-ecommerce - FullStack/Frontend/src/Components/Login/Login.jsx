@@ -3,6 +3,7 @@ import './Login.css';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { userLoginContext } from '../../Contexts/userLoginContext';
+import { toast } from 'react-toastify';
 
 
 function Login() {
@@ -10,9 +11,19 @@ function Login() {
   const { register, handleSubmit, formState: { errors } } = useForm();
   const { handleLogin, userLoginStatus, err } = useContext(userLoginContext);
 
+  // Function to handle login
   function onLogin(userDetails) {
-    handleLogin(userDetails)
-    // console.log('user Details: ', userDetails);
+    handleLogin(userDetails);
+    // Notify user of successful login
+    toast.success('Login Success', {
+      position: "top-center",
+      autoClose: 1500,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+    });
   }
 
   useEffect(() => {

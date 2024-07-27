@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import './Cart.css';
 import { userLoginContext } from '../../Contexts/userLoginContext';
 import Product from '../product/Product';
+import { toast } from 'react-toastify';
 
 function Cart() {
   const { currentUser } = useContext(userLoginContext);
@@ -51,6 +52,17 @@ function Cart() {
         const res = await response.json();
         console.log('Product removed:', res);
         getCartProductsofUserCart();
+
+        // Notify user of successful removal
+        toast.info('Product removed from cart', {
+            position: "top-center",
+            autoClose: 1000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: true,
+            progress: undefined,
+        });
     }
     catch (error) {
         console.error('Error removing product:', error);

@@ -10,6 +10,8 @@ import UserProfile from './Components/user-profile/UserProfile'
 import Cart from './Components/cart/Cart'
 import Products from './Components/products/Products'
 import EditUser from './Components/edit-user/EditUser'
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'; // Import Toastify CSS
 
 
 function App() {
@@ -57,15 +59,18 @@ function App() {
           ]
         },
         {
-          path:"edit-user",
-          element: <EditUser/>
+          path: "edit-user",
+          element: <EditUser />
         }
       ]
     }
   ])
 
   return (
-    <RouterProvider router={browserRouter} />
+    <div>
+      <RouterProvider router={browserRouter} />
+      <ToastContainer /> {/* Add ToastContainer here */}
+    </div>
   )
 }
 
