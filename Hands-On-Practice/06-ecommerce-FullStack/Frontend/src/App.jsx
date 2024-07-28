@@ -10,8 +10,8 @@ import UserProfile from './Components/user-profile/UserProfile'
 import Cart from './Components/cart/Cart'
 import Products from './Components/products/Products'
 import EditUser from './Components/edit-user/EditUser'
-import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'; // Import Toastify CSS
+import { Toaster } from 'react-hot-toast';
 
 
 function App() {
@@ -69,7 +69,10 @@ function App() {
   return (
     <div>
       <RouterProvider router={browserRouter} />
-      <ToastContainer /> {/* Add ToastContainer here */}
+      <div><Toaster
+        position="top-center"
+        reverseOrder={false}
+      /></div>
     </div>
   )
 }

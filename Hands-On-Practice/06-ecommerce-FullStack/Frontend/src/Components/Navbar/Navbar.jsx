@@ -4,7 +4,7 @@ import { userLoginContext } from '../../Contexts/userLoginContext';
 import { useContext } from 'react';
 import { useNavigate } from "react-router-dom";
 import './Navbar.css';
-import { toast } from 'react-toastify';
+import toast from "react-hot-toast";
 
 function Navbar() {
   const navigate = useNavigate();
@@ -13,14 +13,19 @@ function Navbar() {
   function logoutFromNav() {
     logoutUser();
     navigate('/');
-    toast.success('Logout Success', {
-      position: "top-right",
-      autoClose: 500,
-      hideProgressBar: true,
-      closeOnClick: true,
-      pauseOnHover: false,
-      draggable: true,
-      progress: undefined,
+    toast.success("Logout Successful",{
+      style:{
+        marginTop:'-10px',
+        marginBottom:'10px',
+        borderRadius:'10px',
+        background: '#333',
+        color: '#fff',
+      },
+      iconTheme:{
+        primary: '#fff',
+        secondary: '#333',
+      },
+      icon: '👋',
     });
   }
 

@@ -2,6 +2,7 @@ import React, { useEffect, useState, useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { userLoginContext } from '../../Contexts/userLoginContext';
+import toast from 'react-hot-toast';
 
 function EditUser() {
     const { register, handleSubmit, formState: { errors }, setValue } = useForm();
@@ -24,7 +25,7 @@ function EditUser() {
         const updatePayload = { oldUsername: currentUser.username, ...updatedDetails };
 
         let res = await fetch('https://ecommerce-backend-fswd.vercel.app/user-api/users', {
-        // let res = await fetch('http://localhost:4000/user-api/users', {
+            // let res = await fetch('http://localhost:4000/user-api/users', {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -37,6 +38,20 @@ function EditUser() {
         if (res.message === "User Updated") {
             // Update the currentUser with the updated details
             setCurrentUser({ ...currentUser, ...updatedDetails });
+            toast.success('Profile Updated Successfully', {
+                style: {
+                    marginTop: '-10px',
+                    marginBottom: '10px',
+                    borderRadius: '10px',
+                    background: '#333',
+                    color: '#fff',
+                },
+                iconTheme: {
+                    primary: '#fff',
+                    secondary: '#333',
+                },
+                icon: '🎉',
+            });
             navigate('/');
         } else {
             setError(res.message);

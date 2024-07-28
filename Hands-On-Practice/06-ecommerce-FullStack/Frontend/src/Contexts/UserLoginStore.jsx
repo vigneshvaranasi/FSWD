@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { userLoginContext } from './userLoginContext';
 import { useNavigate } from 'react-router-dom';
-import { toast } from 'react-toastify';
+import toast from 'react-hot-toast';
 
 function UserLoginStore({ children }) {
     const [currentUser, setCurrentUser] = useState(null);
@@ -30,10 +30,19 @@ function UserLoginStore({ children }) {
                 setErr("");
 
                 // Notify user of successful login
-                toast.success('Login Success', {
-                    position: "top-right",
-                    autoClose: 500,
-                    hideProgressBar: true,
+                toast.success("Login Successful",{
+                    style:{
+                        marginTop:'-10px',
+                        marginBottom:'10px',
+                        borderRadius:'10px',
+                        background: '#333',
+                        color: '#fff',
+                    },
+                    iconTheme:{
+                        primary: '#fff',
+                        secondary: '#333',
+                    },
+                    icon: '🎉',
                 });
 
                 // Save token in Session Storage

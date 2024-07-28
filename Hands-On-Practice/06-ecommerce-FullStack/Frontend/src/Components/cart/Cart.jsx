@@ -2,7 +2,8 @@ import React, { useState, useEffect, useContext } from 'react';
 import './Cart.css';
 import { userLoginContext } from '../../Contexts/userLoginContext';
 import Product from '../product/Product';
-import { toast } from 'react-toastify';
+import toast from 'react-hot-toast';
+
 
 function Cart() {
   const { currentUser } = useContext(userLoginContext);
@@ -39,7 +40,7 @@ function Cart() {
   async function removeFromCart(productId) {
     try {
         // Log productId for debugging
-        console.log('Removing product with ID:', productId);
+        // console.log('Removing product with ID:', productId);
         // const response = await fetch(`http://localhost:4000/user-api/delete-from-cart/${currentUser.username}`, {
         const response = await fetch(`https://ecommerce-backend-fswd.vercel.app/user-api/delete-from-cart/${currentUser.username}`, {
             method: 'PUT',
@@ -50,22 +51,33 @@ function Cart() {
             body: JSON.stringify({ product: { id: productId } })
         });
         const res = await response.json();
-        console.log('Product removed:', res);
+        // console.log('Product removed:', res);
         getCartProductsofUserCart();
 
         // Notify user of successful removal
-        toast.error('Product removed from cart', {
-            position: "top-right",
-            autoClose: 500,
-            hideProgressBar: true,
-            closeOnClick: true,
-            pauseOnHover: false,
-            draggable: true,
-            progress: undefined,
+        toast.success('Product removed from cart',{
+          style:{
+            marginTop:'-10px',
+            marginBottom:'10px',
+            borderRadius:'10px',
+            background: '#333',
+            color: '#fff',
+          },
+          icon: '🗑️'
         });
     }
     catch (error) {
         console.error('Error removing product:', error);
+        toast.error('Error removing product from cart',{
+          style:{
+            marginTop:'-10px',
+            marginBottom:'10px',
+            borderRadius:'10px',
+            background: '#333',
+            color: '#fff',
+          },
+          icon: '🚫'
+        });
     }
 }
 

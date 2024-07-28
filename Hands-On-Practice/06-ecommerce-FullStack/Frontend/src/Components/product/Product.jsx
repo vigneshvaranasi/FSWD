@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import './Product.css';
 import { userLoginContext } from '../../Contexts/userLoginContext';
-import { toast } from 'react-toastify';
+import toast from 'react-hot-toast';
 
 function Product({ product, showAddToCart, onProductRemove }) {
     const { currentUser, userLoginStatus } = useContext(userLoginContext);
@@ -11,28 +11,47 @@ function Product({ product, showAddToCart, onProductRemove }) {
         try {
             // let res = await fetch(`http://localhost:4000/user-api/add-to-cart/${currentUser.username}`, {
             let res = await fetch(`https://ecommerce-backend-fswd.vercel.app/user-api/add-to-cart/${currentUser.username}`, {
-                method:'PUT',
+                method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({product: productObj})
+                body: JSON.stringify({ product: productObj })
             });
             res = await res.json();
-            console.log('res: ', res);
-
+            // console.log('res: ', res);
+            // Notify user of successful addition
+            toast.success('Product added to cart', {
+                style: {
+                    marginTop: '-10px',
+                    marginBottom: '10px',
+                    borderRadius: '10px',
+                    background: '#333',
+                    color: '#fff',
+                },
+                iconTheme: {
+                    primary: '#fff',
+                    secondary: '#333',
+                },
+                icon: '🛒',
+            });
         } catch (error) {
             console.error('Error adding product to cart:', error);
+            toast.error('Error adding product to cart', {
+                style: {
+                    marginTop: '-10px',
+                    marginBottom: '10px',
+                    borderRadius: '10px',
+                    background: '#333',
+                    color: '#fff',
+                },
+                iconTheme: {
+                    primary: '#fff',
+                    secondary: '#333',
+                },
+                icon: '🚫',
+            });
         }
 
-        toast.success('Product added to cart', {
-            position: "top-right",
-            autoClose: 500,
-            hideProgressBar: true,
-            closeOnClick: true,
-            pauseOnHover: false,
-            draggable: true,
-            progress: undefined,
-        });
     }
 
 
