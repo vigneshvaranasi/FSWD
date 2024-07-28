@@ -12,6 +12,7 @@ import Products from './Components/products/Products'
 import EditUser from './Components/edit-user/EditUser'
 import 'react-toastify/dist/ReactToastify.css'; // Import Toastify CSS
 import { Toaster } from 'react-hot-toast';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
