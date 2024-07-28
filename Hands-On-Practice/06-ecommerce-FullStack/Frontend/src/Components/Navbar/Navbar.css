@@ -1,13 +1,18 @@
 .header{
-    background-color: var(--medium-brown);    
     /* background-color: var(--light-blue); */
+    /* Transparent Background */
+    /* border-bottom: 1px solid transparent;
+    background-color:transparent;
+    backdrop-filter: blur(50px) ;
+    -webkit-backdrop-filter: blur(50px); */
+    background-color: var(--medium-brown);    
     font-size: 1.3rem;
     font-weight: 500;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-    
+    color: aqua;
 }
 .logo{
     padding-top: 15px !important;

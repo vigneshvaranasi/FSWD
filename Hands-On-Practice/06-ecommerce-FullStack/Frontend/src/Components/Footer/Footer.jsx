@@ -4,6 +4,9 @@ import amzlogo from '../../assets/amazon.png';
 import { Link } from 'react-router-dom';
 
 function Footer() {
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  };
   return (
     <footer className="footer text-white py-5">
       <div className="container">
@@ -15,10 +18,10 @@ function Footer() {
           <div className="col-md-4">
             <h3>Links</h3>
             <ul className="list-unstyled">
-              <li><Link to="/" className="text-white">Home</Link></li>
-              <li><Link to="/register" className="text-white">Register</Link></li>
-              <li><Link to="/login" className="text-white">Login</Link></li>
-              <li><Link to="/about" className="text-white">About</Link></li>
+              <li><Link to="/" className="text-white" onClick={scrollToTop}>Home</Link></li>
+              <li><Link to="/register" className="text-white" onClick={scrollToTop}>Register</Link></li>
+              <li><Link to="/login" className="text-white" onClick={scrollToTop}>Login</Link></li>
+              <li><Link to="/about" className="text-white" onClick={scrollToTop}>About</Link></li>
             </ul>
           </div>
           <div className="col-md-4">
