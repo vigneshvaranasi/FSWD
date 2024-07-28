@@ -7,7 +7,7 @@ import Products from '../products/Products';
 function Home() {
     const { userLoginStatus,currentUser } = useContext(userLoginContext);
     return (
-        <div>
+        <div className='mt-5'>
             {
                 userLoginStatus && 
                 <div className="text-center">

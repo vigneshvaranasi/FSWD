@@ -14,16 +14,6 @@ function Login() {
   // Function to handle login
   function onLogin(userDetails) {
     handleLogin(userDetails);
-    // Notify user of successful login
-    toast.success('Login Success', {
-      position: "top-center",
-      autoClose: 1500,
-      hideProgressBar: true,
-      closeOnClick: true,
-      pauseOnHover: false,
-      draggable: true,
-      progress: undefined,
-    });
   }
 
   useEffect(() => {

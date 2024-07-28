@@ -4,7 +4,7 @@ import { userLoginContext } from '../../Contexts/userLoginContext'
 import { useContext } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import productsImg from '../../assets/snack.svg'
-import cartBag from '../../assets/bag.svg'
+import cartBag from '../../assets/cart.png'
 import Products from '../products/Products'
 import { Outlet } from 'react-router-dom'
 

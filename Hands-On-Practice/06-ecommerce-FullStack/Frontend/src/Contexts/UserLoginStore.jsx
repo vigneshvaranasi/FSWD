@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { userLoginContext } from './userLoginContext';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 function UserLoginStore({ children }) {
     const [currentUser, setCurrentUser] = useState(null);
@@ -10,7 +11,8 @@ function UserLoginStore({ children }) {
     async function handleLogin(userObj) {
         try {
             //  POST Request
-            let response = await fetch('http://localhost:4000/user-api/users/login', {
+            // let response = await fetch('http://localhost:4000/user-api/users/login', {
+            let response = await fetch('https://ecommerce-backend-fswd.vercel.app/user-api/users/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -26,6 +28,13 @@ function UserLoginStore({ children }) {
                 setCurrentUser(data.user);
                 setUserLoginStatus(true);
                 setErr("");
+
+                // Notify user of successful login
+                toast.success('Login Success', {
+                    position: "top-right",
+                    autoClose: 500,
+                    hideProgressBar: true,
+                });
 
                 // Save token in Session Storage
                 sessionStorage.setItem('token', data.token);

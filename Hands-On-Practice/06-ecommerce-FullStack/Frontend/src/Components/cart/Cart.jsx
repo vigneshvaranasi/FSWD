@@ -11,9 +11,8 @@ function Cart() {
   async function getCartProductsofUserCart() {
     try {
       // Fetch product data from API
-      // const response = await fetch(`http://localhost:4000/user-cart?username=${currentUser.username}`);
-      // const response = await fetch(`https://user-api-6z6q.onrender.com/user-cart?username=${currentUser.username}`);
-      const response = await fetch(`http://localhost:4000/user-api/users/${currentUser.username}`, {
+      // const response = await fetch(`http://localhost:4000/user-api/users/${currentUser.username}`, {
+      const response = await fetch(`https://ecommerce-backend-fswd.vercel.app/user-api/users/${currentUser.username}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/JSON',
@@ -41,7 +40,8 @@ function Cart() {
     try {
         // Log productId for debugging
         console.log('Removing product with ID:', productId);
-        const response = await fetch(`http://localhost:4000/user-api/delete-from-cart/${currentUser.username}`, {
+        // const response = await fetch(`http://localhost:4000/user-api/delete-from-cart/${currentUser.username}`, {
+        const response = await fetch(`https://ecommerce-backend-fswd.vercel.app/user-api/delete-from-cart/${currentUser.username}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -54,9 +54,9 @@ function Cart() {
         getCartProductsofUserCart();
 
         // Notify user of successful removal
-        toast.info('Product removed from cart', {
-            position: "top-center",
-            autoClose: 1000,
+        toast.error('Product removed from cart', {
+            position: "top-right",
+            autoClose: 500,
             hideProgressBar: true,
             closeOnClick: true,
             pauseOnHover: false,

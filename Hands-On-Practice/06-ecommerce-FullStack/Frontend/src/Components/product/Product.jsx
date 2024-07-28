@@ -9,7 +9,8 @@ function Product({ product, showAddToCart, onProductRemove }) {
 
     async function addToCart(productObj) {
         try {
-            let res = await fetch(`http://localhost:4000/user-api/add-to-cart/${currentUser.username}`, {
+            // let res = await fetch(`http://localhost:4000/user-api/add-to-cart/${currentUser.username}`, {
+            let res = await fetch(`https://ecommerce-backend-fswd.vercel.app/user-api/add-to-cart/${currentUser.username}`, {
                 method:'PUT',
                 headers: {
                     'Content-Type': 'application/json'
@@ -24,8 +25,8 @@ function Product({ product, showAddToCart, onProductRemove }) {
         }
 
         toast.success('Product added to cart', {
-            position: "top-center",
-            autoClose: 1000,
+            position: "top-right",
+            autoClose: 500,
             hideProgressBar: true,
             closeOnClick: true,
             pauseOnHover: false,

@@ -3,6 +3,11 @@
     /* background-color: var(--light-blue); */
     font-size: 1.3rem;
     font-weight: 500;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    
 }
 .logo{
     padding-top: 15px !important;

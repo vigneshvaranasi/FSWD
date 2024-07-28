@@ -7,7 +7,7 @@ function Layout() {
     return (
         <div>
             <Navbar />
-            <div style={{minHeight:"100vh"}} className='container'>
+            <div style={{minHeight:"100vh",marginTop:"130px"}} className='container'>
                 <Outlet />
             </div>
             <Footer />
