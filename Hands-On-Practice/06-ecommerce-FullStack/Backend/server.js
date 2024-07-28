@@ -11,8 +11,8 @@ const app = exp();
 // CORS
 const cors = require('cors');
 app.use(cors({
-    // origin: '*'
-    origin:'http://localhost:8888'
+    origin: '*'
+    // origin:'http://localhost:8888'
 }));    
 
 // Import Mongo Client
