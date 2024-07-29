@@ -13,7 +13,9 @@ productsApp.get('/', expressAsyncHandler(async (req, res) => {
     
     // get Products data from the Products Collection
     let productsList = await productCollection.find().toArray();
-    
+
+    // Sort the products by ID in descending order
+    productsList.sort((a, b) => b.id- a.id);
     // Send the data to the client
     res.send({ message: "All Products", payload: productsList });
     
