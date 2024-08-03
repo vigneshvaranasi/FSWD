@@ -23,23 +23,28 @@ Learn Full Stack Web Development Using HTML, CSS, Bootstrap JavaScript, Node.js,
 6. [E-Commerce - Full Stack](https://ecommerce-fswd.netlify.app/) & [Backend API](https://ecommerce-backend-fswd.vercel.app/)
 
 # Assignments
+### Session 1
 1. [Assignment 1](https://vigneshvaranasi.github.io/FSWD/Assignments/01-Session/01-Assignment)
 2. [Assignment 2](https://vigneshvaranasi.github.io/FSWD/Assignments/01-Session/02-Assignment)
 3. [Assignment 3](https://vigneshvaranasi.github.io/FSWD/Assignments/01-Session/03-Assignment)
+### Session 2
 4. [Assignment 4](https://vigneshvaranasi.github.io/FSWD/Assignments/02-Session/04-1-Assignment)
 5. [Assignment 5](https://vigneshvaranasi.github.io/FSWD/Assignments/02-Session/05-1-Assignment)
 6. [Assignment 6](https://vigneshvaranasi.github.io/FSWD/Assignments/02-Session/06-Assignment)
+### Session 3
 7. [Assignment 7](https://vigneshvaranasi.github.io/FSWD/Assignments/03-Session/07-Assignment)
 8. [Assignment 8.1](https://vigneshvaranasi.github.io/FSWD/Assignments/03-Session/08-1-Assignment)
 [Assignment 8.2](https://vigneshvaranasi.github.io/FSWD/Assignments/03-Session/08-2-Assignment)
 9. [Assignment 9.1](https://vigneshvaranasi.github.io/FSWD/Assignments/03-Session/09-1-Assignment)
 [Assignment 9.2](https://vigneshvaranasi.github.io/FSWD/Assignments/03-Session/09-2-Assignment)
+### Session 4
 10. [Assignment 10.1](https://vigneshvaranasi.github.io/FSWD/Assignments/04-Session/10-1-Assignment)
 [Assignment 10.2](https://vigneshvaranasi.github.io/FSWD/Assignments/04-Session/10-2-Assignment)
 11. [Assignment 11.1](https://vigneshvaranasi.github.io/FSWD/Assignments/04-Session/11-1-Assignment)
 [Assignment 11.2](https://vigneshvaranasi.github.io/FSWD/Assignments/04-Session/11-2-Assignment)
 [Assignment 11.3](https://vigneshvaranasi.github.io/FSWD/Assignments/04-Session/11-3-Assignment)
 [Assignment 11.4](https://vigneshvaranasi.github.io/FSWD/Assignments/04-Session/11-4-Assignment)
+### Session 5
 12. [Assignment 12](https://vigneshvaranasi.github.io/FSWD/Assignments/05-Session/12-Assignment)
 13. [Assignment 13](https://vigneshvaranasi.github.io/FSWD/Assignments/05-Session/13-Assignment)
 14. [Assignment 14](https://vigneshvaranasi.github.io/FSWD/Assignments/05-Session/14-Assignment)
@@ -47,6 +52,7 @@ Learn Full Stack Web Development Using HTML, CSS, Bootstrap JavaScript, Node.js,
 [Assignment 15.2](https://vigneshvaranasi.github.io/FSWD/Assignments/05-Session/15-2-Assignment)
 16. [Assignment 16](https://vigneshvaranasi.github.io/FSWD/Assignments/05-Session/16-Assignment)
 17. [Assignment 17](https://vigneshvaranasi.github.io/FSWD/Assignments/05-Session/17-Assignment)
+### Session 6
 18. [Assignment 18.1](https://vigneshvaranasi.github.io/FSWD/Assignments/06-Session/18-Assignments/18-1-Assignment)
 [Assignment 18.2](https://vigneshvaranasi.github.io/FSWD/Assignments/06-Session/18-Assignments/18-2-Assignment)
 [Assignment 18.3](https://vigneshvaranasi.github.io/FSWD/Assignments/06-Session/18-Assignments/18-3-Assignment)
@@ -58,26 +64,35 @@ Learn Full Stack Web Development Using HTML, CSS, Bootstrap JavaScript, Node.js,
 21. [Assignment 21.1](https://vigneshvaranasi.github.io/FSWD/Assignments/06-Session/21-Assignments/21-1-Assignment)
 [Assignment 21.2](https://vigneshvaranasi.github.io/FSWD/Assignments/06-Session/21-Assignments/21-2-Assignment)
 [Assignment 21.3](https://vigneshvaranasi.github.io/FSWD/Assignments/06-Session/21-Assignments/21-3-Assignment)
+### Session 7
 22. [Assignment 22.1](https://vigneshvaranasi.github.io/FSWD/Assignments/07-Session/22-1-Assignment)
 [Assignment 22.2](https://vigneshvaranasi.github.io/FSWD/Assignments/07-Session/22-2-Assignment)
 23. [Assignment 23](https://vigneshvaranasi.github.io/FSWD/Assignments/07-Session/23-Assignment)
 24. [Assignment 24.1](https://vigneshvaranasi.github.io/FSWD/Assignments/07-Session/24-1-Assignment)
 [Assignment 24.2](https://vigneshvaranasi.github.io/FSWD/Assignments/07-Session/24-2-Assignment)
+### Session 8
 25. [Assignment 25.1](https://vigneshvaranasi.github.io/FSWD/Assignments/08-Session/25-1-Assignment)
 [Assignment 25.2](https://vigneshvaranasi.github.io/FSWD/Assignments/08-Session/25-2-Assignment)
 [Assignment 25.3](https://vigneshvaranasi.github.io/FSWD/Assignments/08-Session/25-3-Assignment)
+### Session 9
 26. [Assignment 26](https://assignment-26.netlify.app/)
 27. [Assignment 27.1](https://assignment-27-1.netlify.app/)
 [Assignment 27.2](https://assignment-27-2.netlify.app/)
+### Session 10
 28. [Assignment 28](https://assignment-28.netlify.app/)
+### Session 11
 29. [Assignment 29](https://assignment-29.netlify.app/)
 30. [Assignment 30](https://assignment-30.netlify.app/)
 31. [Assignment 31](https://31-assignment.netlify.app/)
+### Session 12 & 13
 32. [Assignment 32](https://assignment-32.netlify.app/)
+### Session 14
 33. [Assignment 33](https://assignment-33.netlify.app/)
+### Session 15
 34. [Assignment 34](https://vigneshvaranasi.github.io/FSWD/Assignments/15-Session/34-assignment/34-Assignment)
 35. [Assignment 35](https://fswd-xr11.onrender.com/products)
-# To Do
+
+<!-- # To Do
 - [ ] Add Box Modal
 - [ ] Add Background Images
 - [ ] Add CSS Units
@@ -87,4 +102,4 @@ Learn Full Stack Web Development Using HTML, CSS, Bootstrap JavaScript, Node.js,
 - [ ] Make Grid Responsive
 - [ ] Make Image Responsive in media Queries
 - [ ] Add more in Bootstrap
-- [ ] Add Form styles 
+- [ ] Add Form styles  -->
