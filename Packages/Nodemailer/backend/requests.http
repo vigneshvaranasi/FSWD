@@ -1,0 +1,20 @@
+### -> Sent mail for text
+POST http://localhost:3000/send-text-email
+Content-Type: application/json
+
+{
+  "to": "22501a05j1@pvpsit.ac.in",
+  "subject": "Test Email",
+  "text": "This is a test email sent from my Node.js app using Nodemailer."
+}
+
+
+### -> Sent mail for html
+POST http://localhost:3000/send-html-email
+Content-Type: application/json
+
+{
+  "to": "22501a05j1@pvpsit.ac.in",
+  "subject": "Welcome to Our Service",
+  "html": "<h1>Welcome!</h1><p>Thank you for joining our service.</p><p><a href='https://example.com'>Click here</a> to get started.</p>"
+}
