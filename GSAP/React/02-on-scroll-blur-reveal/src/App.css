@@ -1,0 +1,14 @@
+.text-container {
+  padding: 100px 20px;
+  background-color: #000;
+  color: #fff;
+  font-size: 32px;
+  line-height: 1.5;
+}
+
+.letter {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(10px);
+  transition: all 0.5s ease-out;
+}
