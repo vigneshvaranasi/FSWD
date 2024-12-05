@@ -25,41 +25,37 @@ body{
     align-items: center;
 }
 
-
-
-/* Grid Layout */
-/* For Col 1 30% 70% */
-/* For Col 2 70% 30% */
 .layout {
     display: grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto;
     gap: 10px;
     justify-content: center;
     align-items: center;
     margin: 10px;
     box-sizing: border-box;
-    /* grid-template-areas:
-    "box1 box2"
-    "box4 box3"; */
 }
 
-/* .box1 {
-    grid-area: box1;
+.layout :nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
-
-.box2 {
-    grid-area: box2;
+.layout :nth-child(2) {
+    grid-column-start: 3;
+    grid-column-end: 3;
 }
-
-.box3 {
-    grid-area: box3;
+.layout :nth-child(3) {
+    grid-column-start: 1;
+    grid-column-end: 2;
 }
-
-.box4 {
-    grid-area: box4;
-} */
-
+.layout :nth-child(4) {
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+.layout :nth-child(8) {
+    grid-column-start: 1;
+    grid-column-end: 4
+}
 
 .child {
     background-color: rgb(186, 229, 255);

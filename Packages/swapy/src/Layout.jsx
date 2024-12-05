@@ -32,6 +32,37 @@ function D() {
         </div>
     )
 }
+function E() {
+    return (
+        <div className='child' data-swapy-item="e">
+            <h1>E</h1>
+        </div>
+    )
+}
+function F() {
+    return (
+        <div className='child' data-swapy-item="f">
+            <h1>F</h1>
+        </div>
+    )
+}
+function G() {
+    return (
+        <div className='child' data-swapy-item="g">
+            <h1>G</h1>
+        </div>
+    )
+}
+function H() {
+    return (
+        <div className='child' data-swapy-item="h">
+            <h1>H</h1>
+        </div>
+    )
+}
+
+
+
 
 function Layout() {
     useEffect(() => {
@@ -52,18 +83,31 @@ function Layout() {
 
     return (
         <div className='layout'>
-            <div className='box1' data-swapy-slot="1">
+            <div data-swapy-slot="1">
                 <A />
             </div>
-            <div className='box2' data-swapy-slot="2">
+            <div data-swapy-slot="2">
                 <B />
             </div>
-            <div className='box3' data-swapy-slot="3">
+            <div data-swapy-slot="3">
                 <C />
             </div>
-            <div className='box4' data-swapy-slot="4">
+            <div data-swapy-slot="4">
                 <D />
             </div>
+            <div data-swapy-slot="5">
+                <E />
+            </div>
+            <div data-swapy-slot="6">
+                <F />
+            </div>
+            <div data-swapy-slot="7">
+                <G />
+            </div>
+            <div data-swapy-slot="8">
+                <H />
+            </div>
+
         </div>
     )
 }
