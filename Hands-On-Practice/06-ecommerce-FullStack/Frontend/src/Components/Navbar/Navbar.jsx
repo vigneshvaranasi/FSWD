@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import amzlogo from '../../assets/amazon.png';
 import { userLoginContext } from '../../Contexts/userLoginContext';
+import { cartContext } from "../../Contexts/cartContext";
 import { useContext } from 'react';
 import { useNavigate } from "react-router-dom";
 import './Navbar.css';
@@ -9,6 +10,7 @@ import toast from "react-hot-toast";
 function Navbar() {
   const navigate = useNavigate();
   const { userLoginStatus, setCurrentUser, setUserLoginStatus, currentUser, logoutUser } = useContext(userLoginContext);
+  const { cartItems } = useContext(cartContext);
 
   function logoutFromNav() {
     logoutUser();
@@ -66,8 +68,8 @@ function Navbar() {
             <li className='nav-item d-relative'>
               <Link onClick={scrollToTop} to="/user-profile/cart" className='nav-link text-white'>
                 Cart
-                {currentUser.cart && currentUser.cart.length > 0 && (
-                  <span className='badge bg-secondary ms-1 rounded-5'>{currentUser.cart.length}</span>
+                {cartItems && cartItems.length > 0 && (
+                  <span className='badge bg-secondary ms-1 rounded-5'>{cartItems.length}</span>
                 )}
               </Link>
             </li>

@@ -27,7 +27,7 @@ function Products() {
       {/* Render products */}
       <div className="product-list row justify-content-center flex-wrap">
         {products.map((product) => (
-          <Product key={product.id} product={product} showAddToCart={true}/>
+          <Product key={product.id} product={product} showAddToCart/>
         ))}
       </div>
     </div>
