@@ -12,7 +12,7 @@ Learn Full Stack Web Development Using HTML, CSS, Bootstrap JavaScript, Node.js,
 8. [MongoDB](#mongodb)
 9. [Redux](#redux) 
 10. [GSAP](GSAP/README.md)
-10. [Framer Motion](Framer//README.md)
+11. [Framer Motion](Framer//README.md)
 
  
 # Hands On Practice
