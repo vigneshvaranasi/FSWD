@@ -1,4 +1,4 @@
-import Greet from "./components/greet"
+import Greet from "./components/Greet"
 import Person from "./components/Person"
 import Persons from "./components/Persons"
 import Status from "./components/Status"
