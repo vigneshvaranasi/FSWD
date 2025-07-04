@@ -77,4 +77,37 @@ async function getUserDetails(username:string) {
     console.log('user: ', user);
 }
 
-getUserDetails('vvsvignesh')
+// getUserDetails('vvsvignesh')
+
+async function getToDos(userId:number){
+  const res = await prisma.todos.findMany({where:{userId:userId}})
+  console.log('res: ', res);
+}
+getToDos(1)
+async function getToDosAndDetails(userId:number){
+  const res = await prisma.todos.findMany({where:{userId:userId},
+  select:{
+    id:true,
+    title:true,
+    description:true,
+    done:true,
+    user:true
+  }})
+
+
+  // console.log('res: ', res);
+}
+getToDosAndDetails(1)
+
+
+async function addTodoForUser(userId: number, title: string, description?: string) {
+  const res = await prisma.todos.create({
+    data: {
+      title,
+      description,
+      userId
+    }
+  })
+  console.log('res: ', res);
+}
+// addTodoForUser(1, 'This is a new todo', 'This is a description for the new todo')

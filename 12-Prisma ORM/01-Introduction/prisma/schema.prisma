@@ -20,6 +20,7 @@ model User {
   lastName String?
   username String @unique
   password String
+  todos Todos[]
 }
 
 model Todos {
@@ -27,5 +28,6 @@ model Todos {
   title String
   description String?
   done Boolean @default(false)
-  userId Int
+  userId Int 
+  user User @relation(fields: [userId],references: [id])
 }
